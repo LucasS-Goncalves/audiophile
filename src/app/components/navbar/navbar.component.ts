@@ -11,16 +11,19 @@ export class NavbarComponent {
 
   categoriesList = [
     {
-      productImg: '../../../assets/shared/desktop/image-category-thumbnail-headphones.png',
-      title: 'HEADPHONES'
+      productImg: '../../../assets/shared/desktop/image-category-thumbnail-headphones.svg',
+      title: 'HEADPHONES',
+      width: 80
     },
     {
-      productImg: '../../../assets/shared/desktop/image-category-thumbnail-speakers.png',
-      title: 'EARPHONES'
+      productImg: '../../../assets/shared/desktop/image-category-thumbnail-speakers.svg',
+      title: 'EARPHONES',
+      width: 84
     },
     {
-      productImg: '../../../assets/shared/desktop/image-category-thumbnail-earphones.png',
-      title: 'SPEAKERS'
+      productImg: '../../../assets/shared/desktop/image-category-thumbnail-earphones.svg',
+      title: 'SPEAKERS',
+      width: 103
     },
   ];
 
