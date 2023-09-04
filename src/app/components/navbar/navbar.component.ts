@@ -17,12 +17,12 @@ export class NavbarComponent {
     },
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-speakers.svg',
-      title: 'EARPHONES',
+      title: 'SPEAKERS',
       width: 84
     },
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-earphones.svg',
-      title: 'SPEAKERS',
+      title: 'EARPHONES',
       width: 103
     },
   ];

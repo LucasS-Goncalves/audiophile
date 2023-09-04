@@ -118,3 +118,19 @@
   transition: .6s;
 }
 
+@media(min-width: 768px){
+
+  .header .nav{
+    height: 340px;
+    padding-top: 110px;
+  }
+
+  .header .nav .categoriesList{
+    flex-direction: row;
+    gap: .6rem;
+  }
+
+  .header .nav .categoriesList .category{
+    width: 223px;
+  }
+}
