@@ -35,17 +35,13 @@
   position: absolute;
   top: 100%;
   left: 0;
-  visibility: hidden;
-  opacity: 0;
   padding-top: 80px;
   background-color: var(--white);
   border-radius: 0 0 8px 8px;
-  transition: .3s;
 }
 
-.header.menuOpened .nav{
-  visibility: visible;
-  opacity: 1;
+.header .categoriesList-links{
+  display: none;
 }
 
 .header .nav .categoriesList{
@@ -55,6 +51,14 @@
   justify-content: center;
   position: relative;
   gap: 4.5rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s;
+}
+
+.header.menuOpened .nav .categoriesList{
+  visibility: visible;
+  opacity: 1;
 }
 
 .header .nav .categoriesList .category{
@@ -147,5 +151,55 @@
 
   .header .nav .categoriesList .category{
     width: 223px;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .header{
+    padding: 0 6rem;
+  }
+
+  .header .hamburgerButton{
+    display: none;
+  }
+
+  .header .logo{
+    position: initial;
+    translate: 0;
+  }
+
+  .header .nav{
+    width: auto;
+    height: auto;
+    position: initial;
+    padding-top: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .header .nav .categoriesList{
+    display: none;
+    transition: 0;
+  }
+
+  .header .nav .categoriesList-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  .header .nav .categoriesList-links .link{
+    font-size: .8125rem;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2px;
+    color: var(--white);
+    text-transform: uppercase;
   }
 }
