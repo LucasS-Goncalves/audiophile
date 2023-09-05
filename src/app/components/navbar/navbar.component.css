@@ -8,6 +8,7 @@
   padding: 0 1.5rem;
   background-color: var(--black-1);
   z-index: 999;
+  transition: .2s;
 }
 
 .header .hamburgerButton,
@@ -21,6 +22,11 @@
 .header .logo{
   width: 143px;
   height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  transition: .2s;
 }
 
 .header .nav{
@@ -119,6 +125,15 @@
 }
 
 @media(min-width: 768px){
+
+  .header{
+    padding: 0 2rem;
+  }
+
+  .header .logo{
+    left: 100px;
+    translate: 0 -50%;
+  }
 
   .header .nav{
     height: 340px;
