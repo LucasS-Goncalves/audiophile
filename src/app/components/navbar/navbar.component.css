@@ -39,6 +39,12 @@
   padding-top: 80px;
   background-color: var(--white);
   border-radius: 0 0 8px 8px;
+  visibility: hidden;
+  transition: visibility .3s;
+}
+
+.header.menuOpened .nav{
+  visibility: visible;
 }
 
 .header .categoriesList-links{
@@ -177,6 +183,7 @@
     padding-top: 0;
     background-color: transparent;
     border-radius: 0;
+    visibility: visible;
   }
 
   .header .nav .categoriesList{

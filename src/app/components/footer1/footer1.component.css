@@ -1,0 +1,48 @@
+.audio_section{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0 auto;
+}
+
+.audio_section .img_container{
+  width: 327px;
+  height: 300px;
+}
+
+.audio_section .img_container .gearImg{
+  width: 100%;
+  display: block;
+}
+
+.audio_section .texts_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+  text-align: center;
+}
+
+.audio_section .texts_container .title{
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black-1);
+}
+
+.audio_section .texts_container .title strong{
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--light-brown);
+}
+
+.audio_section .texts_container .description{
+  font-size: .9375rem;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--black-1);
+  opacity: .5;
+}
