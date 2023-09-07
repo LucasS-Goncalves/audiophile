@@ -125,9 +125,43 @@
 
   .footer{
     height: 365px;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3rem;
+    align-items: center;
     padding: 0 2.5rem;
+  }
+
+  .sectionPages{
+    width: 1110px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sectionPages .sections_list .section a{
+    transition: .2s;
+  }
+
+  .sectionPages .sections_list .section a:hover{
+    color: var(--light-brown);
+  }
+
+  .footerText_container{
+    width: 1110px;
+    gap: 4.5rem;
+  }
+
+  .footerText_container .text{
+    width: 540px;
+  }
+
+  .socialMedias_list{
+    bottom: 90px;
+  }
+
+  .socialMedias_list a svg path{
+    transition: .2s;
+  }
+
+  .socialMedias_list a svg:hover path{
+    fill: var(--light-brown);
   }
 }
