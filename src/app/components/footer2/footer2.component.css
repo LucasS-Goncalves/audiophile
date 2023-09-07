@@ -54,7 +54,6 @@
   gap: 3rem;
   text-align: center;
   color: var(--white);
-  opacity: .5;
 }
 
 .footerText_container .text{
@@ -62,12 +61,14 @@
   font-size: .9375rem;
   font-weight: 500;
   line-height: 25px;
+  opacity: .5;
 }
 
 .footerText_container .copyright{
   font-size: .9375rem;
   font-weight: 700;
   line-height: 25px;
+  opacity: .5;
 }
 
 .socialMedias_list{
@@ -80,14 +81,12 @@
 
   .footer{
     height: 400px;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 3rem;
+    align-items: center;
     padding: 0 2.5rem;
-    position: relative;
   }
 
   .sectionPages{
+    width: 689px;
     align-items: flex-start;
     gap: 1.8rem;
   }
@@ -105,6 +104,7 @@
   .footerText_container{
     align-items: flex-start;
     gap: 5.1rem;
+    position: relative;
     text-align: start;
   }
 
@@ -116,7 +116,18 @@
     align-items: center;
     gap: 1.2rem;
     position: absolute;
-    right: 2.5rem;
-    bottom: 42px;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .footer{
+    height: 365px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2.5rem;
   }
 }
