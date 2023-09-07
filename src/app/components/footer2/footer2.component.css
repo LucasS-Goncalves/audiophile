@@ -6,9 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  position: relative;
   background-color: var(--black-2);
-
 }
 
 .sectionPages{
@@ -76,4 +74,49 @@
   display: flex;
   align-items: center;
   gap: 1.2rem;
+}
+
+@media(min-width: 768px){
+
+  .footer{
+    height: 400px;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3rem;
+    padding: 0 2.5rem;
+    position: relative;
+  }
+
+  .sectionPages{
+    align-items: flex-start;
+    gap: 1.8rem;
+  }
+
+  .sectionPages h3::before{
+    left: 0;
+    translate: 0;
+  }
+
+  .sectionPages .sections_list{
+    flex-direction: row;
+    gap: 1.8rem;
+  }
+
+  .footerText_container{
+    align-items: flex-start;
+    gap: 5.1rem;
+    text-align: start;
+  }
+
+  .footerText_container .text{
+    width: 689px;
+  }
+
+  .socialMedias_list{
+    align-items: center;
+    gap: 1.2rem;
+    position: absolute;
+    right: 2.5rem;
+    bottom: 42px;
+  }
 }
