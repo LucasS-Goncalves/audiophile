@@ -31,7 +31,7 @@ export class NavbarComponent{
   @HostListener('window:resize', ['$event'])
   onResize(){
     this.innerWidth = window.innerWidth;
-    if(this.innerWidth > 767 && this.isMenuOpened === true){
+    if(this.innerWidth > 1199 && this.isMenuOpened === true){
       this.isMenuOpened = false;
     }
   }
