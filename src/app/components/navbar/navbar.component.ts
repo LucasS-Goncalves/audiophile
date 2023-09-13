@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent{
 
   isMenuOpened = false;
+  innerWidth: any;
 
   categoriesList = [
     {
@@ -26,6 +27,14 @@ export class NavbarComponent {
       width: 103
     },
   ];
+
+  @HostListener('window:resize', ['$event'])
+  onResize(){
+    this.innerWidth = window.innerWidth;
+    if(this.innerWidth > 767 && this.isMenuOpened === true){
+      this.isMenuOpened = false;
+    }
+  }
 
   openMenu(){
     this.isMenuOpened  = !this.isMenuOpened;
