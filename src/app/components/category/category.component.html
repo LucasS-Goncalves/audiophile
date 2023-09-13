@@ -1,0 +1,19 @@
+<section class="categoriesSection">
+  <ul class="categoriesList">
+    <li class="category" *ngFor="let category of categoriesList">
+      <img [src]="category.productImg" alt="" class="category-productImg">
+      <article class="categoryInfo-container">
+        <h2 class="categoryTitle">
+          {{ category.title }}
+        </h2>
+        <a class="categoryLink">
+          <p>
+            shop
+          </p>
+          <img src="../../../assets/shared/desktop/icon-arrow-right.svg" alt="arrow">
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
+
