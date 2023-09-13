@@ -17,6 +17,10 @@ html{
   background-color: var(--white);
 }
 
+button{
+  font-family: var(--manrope);
+}
+
 ul{
   list-style: none;
 }
