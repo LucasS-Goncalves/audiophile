@@ -12,13 +12,13 @@
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  padding: 4rem 0;
+  padding: 3rem 0;
   background-color: var(--light-brown);
   position: relative;
   border-radius: 12px;
 }
 
-.zx9-speaker_imgContainer{
+.zx9-speaker_container .zx9-speaker_imgContainer{
   width: 172.25px;
   height: 207px;
 }
@@ -29,7 +29,7 @@
   z-index: 2;
 }
 
-.zx9-speaker_container .zx9-speaker_imgContainer .circles_container{
+.zx9-speaker_container .circles_container{
   width: 100%;
   position: absolute;
   top: 0;
@@ -37,7 +37,8 @@
   translate: -50% 0;
 }
 
-.zx9-speaker_container .zx9-speaker_imgContainer .circles_container .circles{
+.zx9-speaker_container .circles_container .circles{
+  width: 100%;
   display: block;
 }
 
@@ -45,7 +46,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -72,4 +73,37 @@
 .zx9-speaker_container .zx9-speaker-text .see_product-button{
   background-color: var(--black-1);
   color: var(--white);
+}
+
+@media(min-width: 768px){
+
+  .products_section{
+    width: 689px;
+    margin-top: 6rem;
+  }
+
+  .zx9-speaker_container{
+    gap: 4rem;
+    padding: 4.2rem 0;
+  }
+
+  .zx9-speaker_container .zx9-speaker_imgContainer{
+    width: 197.21px;
+    height: 237px;
+  }
+
+  .zx9-speaker_container .zx9-speaker-text{
+    gap: 1.5rem;
+  }
+
+  .zx9-speaker_container .zx9-speaker-text .zx9-speaker-title{
+    width: 261px;
+    font-size: 3.5rem;
+    line-height: 58px;
+    letter-spacing: 2px;
+  }
+
+  .zx9-speaker_container .zx9-speaker-text .zx9-speaker-description{
+    width: 349px;
+  }
 }
