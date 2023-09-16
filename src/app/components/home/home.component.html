@@ -28,16 +28,17 @@
   <app-category></app-category>
   <section class="products_section">
     <div class="zx9-speaker_container">
-      <div class="zx9-speaker_imgContainer">
-        <img src="../../../assets/home/mobile/image-speaker-zx9.png" alt="ZX9 Speaker" class="zx9-speaker_img">
-      </div>
-      <div class="circles_container">
-        <picture>
+        <picture class="zx9-speaker_picture">
+          <source media="(max-width: 1199px)" srcset="../../../assets/home/mobile/image-speaker-zx9.png">
+          <source media="(min-width: 768px)" srcset="../../../assets/home/desktop/image-speaker-zx9.png">
+          <img src="../../../assets/home/mobile/image-speaker-zx9.png" alt="ZX9 Speaker" class="zx9-speaker_img">
+        </picture>
+        <picture class="circles_picture">
           <source media="(max-width: 767px)" srcset="../../../assets/home/mobile/circles-mobile.svg">
-          <source media="(min-width: 768px)" srcset="../../../assets/home/desktop/pattern-circles.svg">
+          <source media="(max-width: 1199px)" srcset="../../../assets/home/tablet/pattern-circles-tablet.svg">
+          <source media="(min-width: 1200px)" srcset="../../../assets/home/desktop/pattern-circles.svg">
           <img src="../../../assets/home/mobile/circles-mobile.svg" alt="circles" class="circles">
         </picture>
-      </div>
       <article class="zx9-speaker-text">
         <h3 class="zx9-speaker-title">
           ZX9 <br>
