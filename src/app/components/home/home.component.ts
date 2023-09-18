@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: [
     './home.component.css',
     './styles/zx9-section.css',
-    './styles/zx7-section.css'
+    './styles/zx7-section.css',
+    './styles/yx1-section.css'
   ]
 })
 export class HomeComponent {
