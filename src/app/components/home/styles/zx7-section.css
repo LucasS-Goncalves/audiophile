@@ -45,3 +45,20 @@
     margin-top: 2rem;
   }
 }
+
+@media(min-width: 1200px){
+
+  .zx7-speaker_container{
+    margin-top: 3rem;
+  }
+
+  .zx7-speaker_container .zx7-speaker-text .see_product-button{
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .zx7-speaker_container .zx7-speaker-text .see_product-button:hover{
+    background-color: var(--black-1);
+    color: var(--white);
+  }
+}
