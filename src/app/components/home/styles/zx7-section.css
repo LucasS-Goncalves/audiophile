@@ -1,0 +1,41 @@
+.zx7-speaker_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.zx7-speaker_container .zx7-speaker_picture{
+  width: 100%;
+
+}
+
+.zx7-speaker_container .zx7-speaker_picture .zx7-speaker_img{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.zx7-speaker_container .zx7-speaker-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  translate: 0 -50%;
+}
+
+.zx7-speaker_container .zx7-speaker-text .zx7-speaker-title{
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.zx7-speaker_container .zx7-speaker-text .see_product-button{
+  background-color: transparent;
+  border: 1px solid var(--black-1);
+}

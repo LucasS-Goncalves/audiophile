@@ -158,4 +158,13 @@
     gap: 2rem;
     text-align: start;
   }
+
+  .zx9-speaker_container .zx9-speaker-text .see_product-button{
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .zx9-speaker_container .zx9-speaker-text .see_product-button:hover{
+    background-color: var(--grey-3);
+  }
 }
