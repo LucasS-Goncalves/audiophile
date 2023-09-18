@@ -58,3 +58,28 @@
     height: 320px;
   }
 }
+
+@media(min-width: 1200px){
+
+  .yx1-earphones_container{
+    margin-top: 3rem;
+  }
+
+  .yx1-earphones_container .yx1-earphones_picture{
+    width: 540px;
+  }
+
+  .yx1-earphones_container .yx1-earphone-text{
+    width: 540px;
+  }
+
+  .yx1-earphones_container .see_product-button{
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .yx1-earphones_container .see_product-button:hover{
+    background-color: var(--black-1);
+    color: var(--white);
+  }
+}
