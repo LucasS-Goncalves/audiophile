@@ -1,0 +1,17 @@
+.app-category_container{
+  margin-top: 5rem;
+}
+
+@media(min-width: 768px){
+
+  .app-category_container{
+    margin-top: 10rem;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .app-category_container{
+    margin-top: 11rem;
+  }
+}

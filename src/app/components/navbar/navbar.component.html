@@ -7,14 +7,16 @@
       <img src="../../../assets/shared/desktop/logo.svg" alt="logo" class="">
     </h1>
     <nav class="nav">
-      <app-category class="app-category"></app-category>
+      <div class="app-category_container">
+        <app-category></app-category>
+      </div>
     </nav>
     <nav class="nav__forDesktop">
       <ul class="categoriesList-links">
-        <li class="link">
+        <li class="link" [routerLink]="['']">
           home
         </li>
-        <li class="link">
+        <li class="link" [routerLink]="['/headphones']">
           headphones
         </li>
         <li class="link">
