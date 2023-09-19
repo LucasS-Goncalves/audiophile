@@ -68,6 +68,13 @@
   transition: .3s;
 }
 
+.header .header_container .nav .app-category{
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  translate: -50% 0;
+}
+
 .header.menuOpened .header_container .nav{
   visibility: visible;
   opacity: 1;
@@ -75,62 +82,6 @@
 
 .header .header_container .nav__forDesktop .categoriesList-links{
   display: none;
-}
-
-.header .header_container .nav .categoriesList{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  gap: 4.5rem;
-}
-
-.header .header_container .nav .categoriesList .category{
-  width: 327px;
-  height: 165px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  position: relative;
-  padding-bottom: 1.5rem;
-  background-color: var(--grey-1);
-  border-radius: 7px;
-}
-
-.header .header_container .nav .categoriesList .category .category-productImg{
-  position: absolute;
-  top: -50px;
-}
-
-.header .header_container .nav .categoriesList .category .categoryInfo-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.header .header_container .nav .categoriesList .category .categoryInfo-container .categoryTitle{
-  font-size: .9375rem;
-  font-weight: 700;
-  letter-spacing: 1.07px;
-  color: var(--black-1);
-}
-
-.header .header_container .nav .categoriesList .category .categoryInfo-container .categoryLink{
-  display: flex;
-  align-items: center;
-  gap: .7rem;
-}
-
-.header .header_container .nav .categoriesList .category .categoryInfo-container .categoryLink p{
-  font-size: .8125rem;
-  font-weight: 700;
-  color: var(--black-1);
-  opacity: .5;
-  letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 .overlay{
@@ -179,14 +130,10 @@
     padding-top: 110px;
   }
 
-  .header .header_container .nav .categoriesList{
-    flex-direction: row;
-    gap: .6rem;
+  .header .header_container .nav .app-category{
+    top: -35px;
   }
 
-  .header .header_container .nav .categoriesList .category{
-    width: 223px;
-  }
 }
 
 @media(min-width: 1200px){
