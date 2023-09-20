@@ -10,5 +10,9 @@
   top: 50%;
   left: 50%;
   translate: -50% 70%;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   color: var(--white);
 }

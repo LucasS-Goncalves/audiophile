@@ -3,7 +3,35 @@
     headphones
   </h1>
 </header>
+
+<section class="productsSection">
+  <ul class="productList">
+    <li *ngFor="let headphone of headphones" class="product">
+      <picture class="picture">
+        <source media="(max-width: 767px)" [srcset]="headphone.img1">
+        <source media="(max-width: 1199px)" [srcset]="headphone.img2">
+        <source media="(min-width: 1200px)" [srcset]="headphone.img3">
+        <img [src]="headphone.img1" [alt]="headphone.name" class="productImg">
+      </picture>
+      <article class="productInformation">
+        <small class="productInformation-newProduct" *ngIf="headphone.isNewProduct">
+          new product
+        </small>
+        <h2 class="productInformation-name">
+          {{ headphone.name }}
+        </h2>
+        <p class="productInformation-description">
+          {{ headphone.description }}
+        </p>
+        <button class="see_product-button">
+          see product
+        </button>
+      </article>
+    </li>
+  </ul>
+</section>
+
 <div class="app-category_container">
-  <app-category></app-category>
+  <app-category [showAppCategory]="true"></app-category>
 </div>
 <app-footer1></app-footer1>

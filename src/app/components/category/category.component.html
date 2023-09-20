@@ -1,4 +1,4 @@
-<section class="categoriesSection">
+<section class="categoriesSection" [ngClass]="{'visible': showAppCategory}">
   <ul class="categoriesList">
     <li class="category" *ngFor="let category of categoriesList">
       <img [src]="category.productImg" alt="" class="category-productImg">

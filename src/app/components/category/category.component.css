@@ -1,3 +1,14 @@
+.categoriesSection{
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+
+.categoriesSection.visible{
+  visibility: visible;
+  opacity: 1;
+}
+
 .categoriesList{
   display: flex;
   flex-direction: column;
@@ -5,14 +16,6 @@
   justify-content: center;
   position: relative;
   gap: 4.5rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity .3s, visibility .3s;
-}
-
-.categoriesList{
-  visibility: visible;
-  opacity: 1;
 }
 
 .categoriesList .category{

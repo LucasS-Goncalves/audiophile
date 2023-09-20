@@ -9,6 +9,7 @@ export class NavbarComponent{
 
   isMenuOpened = false;
   innerWidth: any;
+  showAppCategory = false;
 
   categoriesList = [
     {
@@ -38,5 +39,6 @@ export class NavbarComponent{
 
   openMenu(){
     this.isMenuOpened  = !this.isMenuOpened;
+    this.showAppCategory = !this.showAppCategory;
   }
 }
