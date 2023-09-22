@@ -66,6 +66,10 @@
 
 @media(min-width: 768px){
 
+  .productsSection{
+    margin-top: 7rem;
+  }
+
   .productList .product{
     width: 689px;
     gap: 2.5rem;
