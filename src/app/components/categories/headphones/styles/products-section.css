@@ -63,3 +63,27 @@
   background-color: var(--light-brown);
   color: var(--white);
 }
+
+@media(min-width: 768px){
+
+  .productList .product{
+    width: 689px;
+    gap: 2.5rem;
+  }
+
+  .productList .product .productInformation{
+    gap: 1rem;
+  }
+
+  .productList .product .productInformation .productInformation-name{
+    font-size: 2.5rem;
+    letter-spacing: 1.43px;
+    line-height: 44px;
+  }
+
+  .productList .product .productInformation .productInformation-description{
+    width: 572px;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+  }
+}

@@ -17,7 +17,7 @@ export class HeadphonesComponent {
       img2: "../../../../assets/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg",
       img3: "../../../../assets/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg",
       isNewProduct: true,
-      name: "XX99 Mark II Headphones",
+      name: "XX99 Mark II <br> Headphones",
       description: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
     },
     {
@@ -25,7 +25,7 @@ export class HeadphonesComponent {
       img2: "../../../../assets/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg",
       img3: "../../../../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
       isNewProduct: false,
-      name: "XX99 Mark I Headphones",
+      name: "XX99 Mark I <br> Headphones",
       description: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
     },
     {
