@@ -33,7 +33,7 @@ export class HeadphonesComponent {
       img2: "../../../../assets/product-xx59-headphones/tablet/image-category-page-preview.jpg",
       img3: "../../../../assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
       isNewProduct: false,
-      name: "XX59 Headphones",
+      name: "XX59 <br> Headphones",
       description: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
     },
   ]

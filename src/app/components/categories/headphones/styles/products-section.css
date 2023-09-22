@@ -1,15 +1,21 @@
 .productsSection{
   width: 100%;
+  margin-top: 4.5rem;
 }
 
 .productList{
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8rem;
 }
 
 .productList .product{
   width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
 .productList .product .picture{
@@ -19,5 +25,41 @@
 .productList .product .picture .productImg{
   width: 100%;
   display: block;
-  border-radius: 5px;
+  border-radius: 12px;
+}
+
+.productList .product .productInformation{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+}
+
+.productList .product .productInformation .productInformation-newProduct{
+  font-size: .875rem;
+  font-weight: 400;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: var(--light-brown);
+}
+
+.productList .product .productInformation .productInformation-name{
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--black-1);
+}
+
+.productList .product .productInformation .productInformation-description{
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: .5;
+  color: var(--black-1);
+}
+
+.productList .product .productInformation .see_product-button{
+  background-color: var(--light-brown);
+  color: var(--white);
 }

@@ -1,6 +1,6 @@
 <section class="categoriesSection" [ngClass]="{'visible': showAppCategory}">
   <ul class="categoriesList">
-    <li class="category" *ngFor="let category of categoriesList">
+    <li class="category" *ngFor="let category of categoriesList" [routerLink]="category.link">
       <img [src]="category.productImg" alt="" class="category-productImg">
       <article class="categoryInfo-container">
         <h2 class="categoryTitle">

@@ -13,14 +13,17 @@ export class CategoryComponent {
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-headphones.svg',
       title: 'HEADPHONES',
+      link: '/headphones'
     },
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-speakers.svg',
       title: 'SPEAKERS',
+      link: ''
     },
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-earphones.svg',
       title: 'EARPHONES',
+      link: ''
     },
   ];
 

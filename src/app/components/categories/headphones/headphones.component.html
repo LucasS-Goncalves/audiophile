@@ -17,8 +17,7 @@
         <small class="productInformation-newProduct" *ngIf="headphone.isNewProduct">
           new product
         </small>
-        <h2 class="productInformation-name">
-          {{ headphone.name }}
+        <h2 class="productInformation-name" [innerHTML]="headphone.name">
         </h2>
         <p class="productInformation-description">
           {{ headphone.description }}
