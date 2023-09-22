@@ -16,3 +16,18 @@
   text-transform: uppercase;
   color: var(--white);
 }
+
+@media(min-width: 768px){
+
+  .header{
+    height: 336px;
+  }
+
+  .header .header_title{
+    font-size: 2.5rem;
+    letter-spacing: 1.43px;
+    line-height: 44px;
+  }
+}
+
+
