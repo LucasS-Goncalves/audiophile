@@ -1,0 +1,10 @@
+.app-category_container{
+  margin-top: 10rem;
+}
+
+@media(min-width: 1200px){
+
+  .app-category_container{
+    margin-top: 14rem;
+  }
+}

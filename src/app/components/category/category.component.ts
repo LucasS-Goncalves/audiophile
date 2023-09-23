@@ -18,12 +18,12 @@ export class CategoryComponent {
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-speakers.svg',
       title: 'SPEAKERS',
-      link: ''
+      link: '/speakers',
     },
     {
       productImg: '../../../assets/shared/desktop/image-category-thumbnail-earphones.svg',
       title: 'EARPHONES',
-      link: ''
+      link: '/earphones'
     },
   ];
 

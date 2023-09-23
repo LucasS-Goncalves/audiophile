@@ -1,0 +1,23 @@
+<ul class="productList">
+  <li *ngFor="let product of products" class="product">
+    <picture class="picture">
+      <source media="(max-width: 767px)" [srcset]="product.img1">
+      <source media="(max-width: 1199px)" [srcset]="product.img2">
+      <source media="(min-width: 1200px)" [srcset]="product.img3">
+      <img [src]="product.img1" [alt]="product.name" class="productImg">
+    </picture>
+    <article class="productInformation">
+      <small class="productInformation-newProduct" *ngIf="product.isNewProduct">
+        new product
+      </small>
+      <h2 class="productInformation-name" [innerHTML]="product.name">
+      </h2>
+      <p class="productInformation-description">
+        {{ product.description }}
+      </p>
+      <button class="see_product-button">
+        see product
+      </button>
+    </article>
+  </li>
+</ul>
