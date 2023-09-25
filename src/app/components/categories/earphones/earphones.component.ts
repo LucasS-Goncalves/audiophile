@@ -13,6 +13,7 @@ export class EarphonesComponent {
 
   earphones = [
     {
+      id: "yx1",
       img1: "../../../../assets/product-yx1-earphones/mobile/image-category-page-preview.jpg",
       img2: "../../../../assets/product-yx1-earphones/tablet/image-category-page-preview.jpg",
       img3: "../../../../assets/product-yx1-earphones/desktop/image-category-page-preview.jpg",

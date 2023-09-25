@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-category',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class CategoryComponent {
 
   @Input() showAppCategory!: boolean;
+  @Output() toggleMenu = new EventEmitter<boolean>();
 
   categoriesList = [
     {
@@ -26,5 +27,9 @@ export class CategoryComponent {
       link: '/earphones'
     },
   ];
+
+  openMenu(){
+    this.toggleMenu.emit(false);
+  }
 
 }

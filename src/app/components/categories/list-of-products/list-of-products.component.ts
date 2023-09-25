@@ -9,12 +9,13 @@ export class ListOfProductsComponent {
 
   @Input() products = [
     {
+      id: "",
       img1: "",
       img2: "",
       img3: "",
       name: "",
       isNewProduct: false,
-      description: ""
+      description: "",
     }
   ]
 }
