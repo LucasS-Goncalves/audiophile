@@ -5,6 +5,7 @@ import { HeadphonesComponent } from './components/categories/headphones/headphon
 import { HomeComponent } from './components/home/home.component';
 import { SpeakersComponent } from './components/categories/speakers/speakers.component';
 import { EarphonesComponent } from './components/categories/earphones/earphones.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: 'earphones', component: EarphonesComponent
+  },
+  {
+    path: 'product/:id', component: ProductDetailComponent
   }
 ];
 

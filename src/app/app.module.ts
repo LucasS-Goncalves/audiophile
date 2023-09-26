@@ -12,6 +12,7 @@ import { HeadphonesComponent } from './components/categories/headphones/headphon
 import { SpeakersComponent } from './components/categories/speakers/speakers.component';
 import { ListOfProductsComponent } from './components/categories/list-of-products/list-of-products.component';
 import { EarphonesComponent } from './components/categories/earphones/earphones.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EarphonesComponent } from './components/categories/earphones/earphones.
     HeadphonesComponent,
     SpeakersComponent,
     ListOfProductsComponent,
-    EarphonesComponent
+    EarphonesComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
