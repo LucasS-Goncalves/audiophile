@@ -28,7 +28,7 @@ export interface Product {
       imgDesktop: string,
     },
   },
-  youMayAlsoLike: YouMayLikeProduct[]
+  youMayAlsoLike: YouMayLikeProducts[]
 }
 
 export interface InTheBox{
@@ -40,12 +40,8 @@ export interface Feature{
   paragraph: string
 }
 
-export interface YouMayLikeProduct{
+export interface YouMayLikeProducts{
   id: string,
   name: string,
-  productImages: {
-    imgMobile: string,
-    imgTablet: string,
-    imgDesktop: string,
-  },
+  productImage: string,
 }
