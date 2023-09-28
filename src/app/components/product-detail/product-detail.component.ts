@@ -6,22 +6,24 @@ import { products } from 'src/app/products';
 @Component({
   selector: 'app-product-detail',
   templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+  styleUrls: [
+    './product-detail.component.css',
+    './styles/productInfo-section.css'
+  ]
 })
 export class ProductDetailComponent implements OnInit{
 
-  id: any;
   product!: Product;
 
   constructor(private route: ActivatedRoute, private router: Router){}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id')!;
-    this.product = products.find(product => product.id === this.id)!;
+    const id = this.route.snapshot.paramMap.get('id')!;
+    this.product = products.find(product => product.id === id)!;
     if(!this.product){
       this.router.navigate([''])
     }
 
-    console.log(this.product)
+    console.log(this.product);
   }
 }

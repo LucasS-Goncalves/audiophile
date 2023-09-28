@@ -1,1 +1,48 @@
-<p>product-detail works! {{ id }}</p>
+<app-navbar></app-navbar>
+<div class="background"></div>
+
+<header class="header">
+  <nav class="navbar">
+    <a class="link" [routerLink]="['']">Go Back</a>
+  </nav>
+</header>
+
+<main class="main">
+
+  <section class="product_info-section">
+    <picture class="picture">
+      <source media="(max-width: 767px)" [srcset]="product.productImages.imgMobile">
+      <source media="(max-width: 1199px)" [srcset]="product.productImages.imgTablet">
+      <source media="(min-width: 1200px)" [srcset]="product.productImages.imgDesktop">
+      <img [src]="product.productImages.imgMobile" [alt]="product.productName" class="productImg">
+    </picture>
+    <article class="productInformation">
+      <small class="productInformation-newProduct" *ngIf="product.isNewProduct">
+        new product
+      </small>
+      <h2 class="productInformation-name" [innerHTML]="product.productName">
+      </h2>
+      <p class="productInformation-description">
+        {{ product.productDescription }}
+      </p>
+      <div class="price_container">
+        <span class="price">$</span>
+        <span class="price">{{ product.price }}</span>
+      </div>
+      <div class="buttons_container">
+        <div class="amountButton-container">
+          <button class="descrease-button">-</button>
+          <span>
+            1
+          </span>
+          <button class="increase-button">+</button>
+        </div>
+        <button class="addToCart-button">
+          ADD TO CART
+        </button>
+      </div>
+    </article>
+  </section>
+</main>
+
+

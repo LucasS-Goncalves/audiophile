@@ -216,7 +216,7 @@ export const products: Product[] = [
       imgDesktop: "../assets/product-zx9-speaker/desktop/image-product.jpg",
     },
     isNewProduct: true,
-    productName: "ZX9 speaker",
+    productName: "ZX9 <br> speaker",
     productDescription: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
     price: "4,500",
     features: [
@@ -287,7 +287,7 @@ export const products: Product[] = [
       imgDesktop: "../assets/product-zx7-speaker/desktop/image-product.jpg",
     },
     isNewProduct: false,
-    productName: "ZX7 speaker",
+    productName: "ZX7 <br> speaker",
     productDescription: "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
     price: "3,500",
     features: [
@@ -358,7 +358,7 @@ export const products: Product[] = [
       imgDesktop: "../assets/product-yx1-earphones/desktop/image-product.jpg",
     },
     isNewProduct: true,
-    productName: "YX1 WIRELESS EARPHONES",
+    productName: "YX1 WIRELESS <br> EARPHONES",
     productDescription: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     price: "599",
     features: [
