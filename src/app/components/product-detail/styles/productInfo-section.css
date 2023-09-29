@@ -57,6 +57,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: .3rem;
 }
 
 .product_info-section .productInformation .buttons_container .amountButton-container{
@@ -78,6 +79,17 @@
   font-weight: 700;
   opacity: .25;
   background-color: transparent;
+  border: none;
+}
+
+.product_info-section .productInformation .buttons_container .addToCart-button{
+  width: 160px;
+  height: 48px;
+  font-size: .875rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--light-brown);
   border: none;
 }
 
