@@ -181,4 +181,10 @@
   .product_info-section .productInformation .buttons_container{
     margin-top: 1.5rem;
   }
+
+  .product_info-section .productInformation .buttons_container .amountButton-container .descrease-button,
+  .product_info-section .productInformation .buttons_container .amountButton-container .increase-button,
+  .product_info-section .productInformation .buttons_container .addToCart-button{
+    cursor: pointer;
+  }
 }
