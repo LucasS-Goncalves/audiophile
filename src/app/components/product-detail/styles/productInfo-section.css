@@ -147,8 +147,10 @@
     gap: 0;
   }
 
-  .product_info-section .picture{
+  .product_info-section .picture,
+  .product_info-section .picture .productImg{
     width: 540px;
+    height: 560px;
   }
 
   .product_info-section{
@@ -157,13 +159,26 @@
 
   .product_info-section .productInformation{
     width: 445px;
-    align-items: flex-start;
-    text-align: start;
-    gap: 1rem;
+    gap: 1.3rem;
+  }
+
+  .product_info-section .productInformation .productInformation-newProduct{
+    font-size: .875rem;
+    letter-spacing: 10px;
+  }
+
+  .product_info-section .productInformation .productInformation-name{
+    font-size: 2.5rem;
+    line-height: 44px;
+    letter-spacing: 1.43px;
   }
 
   .product_info-section .productInformation .productInformation-description{
-    width: 100%;
-    margin: 1.2rem 0;
+    width: 445px;
+    margin-top: .5rem;
+  }
+
+  .product_info-section .productInformation .buttons_container{
+    margin-top: 1.5rem;
   }
 }
