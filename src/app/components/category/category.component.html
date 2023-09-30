@@ -1,19 +1,19 @@
 <section class="categoriesSection" [ngClass]="{'visible': showAppCategory}">
-  <ul class="categoriesList">
-    <li class="category" *ngFor="let category of categoriesList" [routerLink]="category.link" (click)="openMenu()">
-      <img [src]="category.productImg" alt="" class="category-productImg">
+  <div class="categoriesList">
+    <a *ngFor="let category of categoriesList" [routerLink]="category.link" class="categoryLink" (click)="openMenu()">
+      <img [src]="category.productImg" [alt]="category.title" class="category-productImg">
       <article class="categoryInfo-container">
         <h2 class="categoryTitle">
           {{ category.title }}
         </h2>
-        <a class="categoryLink">
+        <div class="shop-container">
           <p>
             shop
           </p>
           <img src="../../../assets/shared/desktop/icon-arrow-right.svg" alt="arrow">
-        </a>
+        </div>
       </article>
-    </li>
-  </ul>
+    </a>
+  </div>
 </section>
 

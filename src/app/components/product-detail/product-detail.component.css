@@ -32,10 +32,6 @@
 
 @media(min-width: 768px){
 
-  .background{
-    padding-top: 97px;
-  }
-
   .header{
     margin-top: 2.2rem;
   }
@@ -51,12 +47,26 @@
 
 @media(min-width: 1200px){
 
+  .background{
+    padding-top: 97px;
+  }
+
   .header{
     margin-top: 4.7rem;
   }
 
   .header .navbar{
     width: 1110px;
+  }
+
+  .header .navbar .link{
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .header .navbar .link:hover{
+    color: var(--light-brown);
+    opacity: 1;
   }
 
   .main{

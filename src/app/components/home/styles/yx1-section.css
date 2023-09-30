@@ -38,6 +38,7 @@
 .yx1-earphones_container .see_product-button{
   background-color: transparent;
   border: 1px solid var(--black-1);
+  color: var(--black-1);
 }
 
 @media(min-width: 768px){

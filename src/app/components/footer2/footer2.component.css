@@ -136,6 +136,10 @@
     justify-content: space-between;
   }
 
+  .sectionPages h3{
+    cursor: pointer;
+  }
+
   .sectionPages .sections_list .section a{
     transition: .2s;
   }

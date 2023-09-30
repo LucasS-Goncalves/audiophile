@@ -156,6 +156,7 @@
   .header .header_container .logo{
     position: initial;
     translate: 0;
+    cursor: pointer;
   }
 
   .header .header_container .nav, .header .header_container .nav .app-category_container{

@@ -40,7 +40,11 @@ ul{
 .see_product-button{
   width: 160px;
   height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: .8125rem;
   font-weight: 700;
   letter-spacing: 1px;
