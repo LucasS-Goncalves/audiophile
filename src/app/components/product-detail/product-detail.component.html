@@ -20,8 +20,8 @@
       <small class="productInformation-newProduct" *ngIf="product.isNewProduct">
         new product
       </small>
-      <h2 class="productInformation-name" [innerHTML]="product.productName">
-      </h2>
+      <h1 class="productInformation-name" [innerHTML]="product.productName">
+      </h1>
       <p class="productInformation-description">
         {{ product.productDescription }}
       </p>
@@ -42,6 +42,32 @@
         </button>
       </div>
     </article>
+  </section>
+
+  <section class="content-section">
+    <article class="features-text">
+      <h2 class="features-title">
+        Features
+      </h2>
+      <p class="features-paragraph" *ngFor="let paragraph of product.features">
+        {{ paragraph.paragraph }}
+      </p>
+    </article>
+    <div class="inTheBox-container">
+      <h2 class="inTheBox-title">
+        In the box
+      </h2>
+      <ul class="inTheBox-list">
+        <li class="inTheBox-item" *ngFor="let item of product.inTheBox">
+          <div class="inTheBox-item-amount">
+            {{ item.amount }}
+          </div>
+          <div class="inTheBox-item-itemName">
+            {{ item.item }}
+          </div>
+        </li>
+      </ul>
+    </div>
   </section>
 </main>
 

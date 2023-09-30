@@ -8,7 +8,8 @@ import { products } from 'src/app/products';
   templateUrl: './product-detail.component.html',
   styleUrls: [
     './product-detail.component.css',
-    './styles/productInfo-section.css'
+    './styles/productInfo-section.css',
+    './styles/content-section.css'
   ]
 })
 export class ProductDetailComponent implements OnInit{
