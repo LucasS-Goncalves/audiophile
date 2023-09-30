@@ -186,5 +186,16 @@
   .product_info-section .productInformation .buttons_container .amountButton-container .increase-button,
   .product_info-section .productInformation .buttons_container .addToCart-button{
     cursor: pointer;
+    transition: .3s;
+  }
+
+  .product_info-section .productInformation .buttons_container .amountButton-container .descrease-button:hover,
+  .product_info-section .productInformation .buttons_container .amountButton-container .increase-button:hover{
+    color: var(--light-brown);
+    opacity: 1;
+  }
+
+  .product_info-section .productInformation .buttons_container .addToCart-button:hover{
+    background-color: var(--bege);
   }
 }
