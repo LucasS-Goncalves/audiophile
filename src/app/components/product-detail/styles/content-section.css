@@ -101,3 +101,28 @@
     justify-content: space-between;
   }
 }
+
+@media(min-width: 1200px){
+
+  .content-section{
+    width: 1110px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10rem;
+  }
+
+  .features-text{
+    width: 635px;
+    gap: 2rem;
+  }
+
+  .inTheBox-container{
+    width: 350px;
+    flex-direction: column;
+    gap: 2rem
+  }
+
+  .inTheBox-container .inTheBox-list{
+    gap: .5rem;
+  }
+}
