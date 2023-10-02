@@ -91,3 +91,29 @@
     width: 140px;
   }
 }
+
+@media(min-width: 768px){
+
+  .youMayLike-section{
+    width: 1110px;
+    margin-top: 9rem;
+  }
+
+  .youMayLike-list .youMayLike-item{
+    width: 350px;
+    gap: 2rem;
+  }
+
+  .youMayLike-list .youMayLike-item .item_img-container .item_img{
+    width: 180px;
+  }
+
+  .youMayLike-list .youMayLike-item .see_product-button{
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .youMayLike-list .youMayLike-item .see_product-button:hover{
+    background-color: var(--bege);
+  }
+}
