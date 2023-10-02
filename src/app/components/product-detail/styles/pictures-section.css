@@ -27,3 +27,26 @@
   display: block;
   border-radius: 8px;
 }
+
+@media(min-width: 768px){
+
+  .pictures-section{
+    width: 689px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+  }
+
+  .pictures-container{
+    gap: 1.3rem;
+  }
+
+  .pictures-container .picture .smallImg{
+    width: 277px;
+  }
+
+  .picture .bigImg{
+    width: 395px;
+  }
+}
