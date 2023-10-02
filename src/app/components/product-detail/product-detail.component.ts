@@ -10,7 +10,8 @@ import { products } from 'src/app/products';
     './product-detail.component.css',
     './styles/productInfo-section.css',
     './styles/content-section.css',
-    './styles/pictures-section.css'
+    './styles/pictures-section.css',
+    './styles/youMayLike-section.css'
   ]
 })
 export class ProductDetailComponent implements OnInit{

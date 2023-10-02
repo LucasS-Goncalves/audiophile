@@ -1,0 +1,60 @@
+.youMayLike-section{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 7rem;
+}
+
+.youMayLike-title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: .86px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: var(--black-1);
+}
+
+.youMayLike-list{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.youMayLike-list .youMayLike-item{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.youMayLike-list .youMayLike-item .item_img-container{
+  width: 327px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey-1);
+  border-radius: 8px;
+}
+
+.youMayLike-list .youMayLike-item .item_img-container .item_img{
+  width: 75px;
+}
+
+.youMayLike-list .youMayLike-item .item-name{
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1.71px;
+  text-transform: uppercase;
+  color: var(--black-1);
+}
+
+.youMayLike-list .youMayLike-item .see_product-button{
+  background-color: var(--light-brown);
+  color: var(--white);
+}
