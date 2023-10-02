@@ -50,3 +50,25 @@
     width: 395px;
   }
 }
+
+@media(min-width: 1200px){
+
+  .pictures-section{
+    width: 1110px;
+    margin-top: 9rem;
+  }
+
+  .pictures-container{
+    gap: 1.7rem;
+  }
+
+  .pictures-container .picture .smallImg{
+    width: 445px;
+    height: 280px;
+  }
+
+  .picture .bigImg{
+    width: 635px;
+    height: 592px;
+  }
+}
