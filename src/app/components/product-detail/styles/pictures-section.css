@@ -1,0 +1,29 @@
+.pictures-section{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 5.5rem;
+}
+
+.pictures-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pictures-container .picture .smallImg{
+  width: 327px;
+  height: 174px;
+  display: block;
+  border-radius: 8px;
+}
+
+.picture .bigImg{
+  width: 327px;
+  height: 368px;
+  display: block;
+  border-radius: 8px;
+}

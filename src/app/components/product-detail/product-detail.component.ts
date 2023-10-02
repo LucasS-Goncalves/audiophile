@@ -9,7 +9,8 @@ import { products } from 'src/app/products';
   styleUrls: [
     './product-detail.component.css',
     './styles/productInfo-section.css',
-    './styles/content-section.css'
+    './styles/content-section.css',
+    './styles/pictures-section.css'
   ]
 })
 export class ProductDetailComponent implements OnInit{

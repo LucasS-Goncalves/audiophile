@@ -69,6 +69,29 @@
       </ul>
     </div>
   </section>
+
+  <section class="pictures-section">
+    <div class="pictures-container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" [srcset]="product.galleryImages.img1.imgMobile">
+        <source media="(max-width: 1199px)" [srcset]="product.galleryImages.img1.imgTablet">
+        <source media="(min-width: 1200px)" [srcset]="product.galleryImages.img1.imgDesktop">
+        <img [src]="product.galleryImages.img1.imgMobile" class="smallImg">
+      </picture>
+      <picture class="picture">
+        <source media="(max-width: 767px)" [srcset]="product.galleryImages.img2.imgMobile">
+        <source media="(max-width: 1199px)" [srcset]="product.galleryImages.img2.imgTablet">
+        <source media="(min-width: 1200px)" [srcset]="product.galleryImages.img2.imgDesktop">
+        <img [src]="product.galleryImages.img2.imgMobile" class="smallImg">
+      </picture>
+    </div>
+    <picture class="picture">
+      <source media="(max-width: 767px)" [srcset]="product.galleryImages.img3.imgMobile">
+      <source media="(max-width: 1199px)" [srcset]="product.galleryImages.img3.imgTablet">
+      <source media="(min-width: 1200px)" [srcset]="product.galleryImages.img3.imgDesktop">
+      <img [src]="product.galleryImages.img3.imgMobile" class="bigImg">
+    </picture>
+  </section>
 </main>
 
 
