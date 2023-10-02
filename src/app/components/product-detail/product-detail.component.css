@@ -30,6 +30,10 @@
   margin-top: 1.8rem;
 }
 
+.app-category{
+  margin-top: 11rem;
+}
+
 @media(min-width: 768px){
 
   .header{
@@ -42,6 +46,10 @@
 
   .main{
     margin-top: 1.5rem;
+  }
+
+  .app-category{
+    margin-top: 10rem;
   }
 }
 
@@ -71,5 +79,9 @@
 
   .main{
     margin-top: 3.3rem;
+  }
+
+  .app-category{
+    margin-top: 16rem;
   }
 }
