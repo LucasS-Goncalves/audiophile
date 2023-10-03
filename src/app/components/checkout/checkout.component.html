@@ -1,0 +1,82 @@
+<div class="background"></div>
+
+<header class="header">
+  <nav class="navbar">
+    <a class="link" [routerLink]="['']">Go Back</a>
+  </nav>
+</header>
+
+<main class="main">
+  <h1 class="title">checkout</h1>
+  <form class="form">
+    <div class="formSection-container">
+      <h2 class="formSection-container-title">
+        billing details
+      </h2>
+      <div class="inputText-container">
+        <div class="name">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" name="" id="name" class="nameInput form-input" placeholder="Alexei Ward">
+        </div>
+        <div class="email">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" name="" id="email" class="emailInput form-input" placeholder="alexei@mail.com">
+        </div>
+        <div class="name">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" name="" id="phone" class="phoneInput form-input" placeholder="+1 202-555-0136">
+        </div>
+      </div>
+    </div>
+
+    <div class="formSection-container">
+      <h2 class="formSection-container-title">
+        shopping info
+      </h2>
+      <div class="inputText-container">
+        <div class="address">
+          <label for="address" class="form-label">Your Address</label>
+          <input type="text" name="" id="address" class="addressInput" placeholder="1137 Williams Avenue">
+        </div>
+        <div class="zipCode">
+          <label for="zipCode" class="form-label">ZIP Code</label>
+          <input type="number" name="" id="zipCode" class="zipCodeInput form-input" placeholder="10001">
+        </div>
+        <div class="city">
+          <label for="city" class="form-label">City</label>
+          <input type="text" name="" id="city" class="cityInput form-input" placeholder="New York">
+        </div>
+        <div class="country">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" name="" id="country" class="countryInput form-input" placeholder="United States">
+        </div>
+      </div>
+    </div>
+
+    <div class="formSection-container">
+      <h2 class="formSection-container-title">
+        payment details
+      </h2>
+      <div class="inputRadio-container">
+        <div class="radioInput-container">
+          <label for="eMoney" class="form-label">e-Money</label>
+          <input type="radio" name="payment" id="eMoney" class="eMoneyRadioInput form-input">
+        </div>
+        <div class="radioInput-container">
+          <label for="cash" class="form-label">Cash on Delivery</label>
+          <input type="radio" name="payment" id="cash" class="cashRadioInput form-input">
+        </div>
+      </div>
+      <div class="eMoney_info">
+        <div class="eMoneyNumber">
+          <label for="eMoneyNumber" class="form-label">e-Money Number</label>
+          <input type="number" name="" id="eMoneyNumber" class="eMoneyNumberInput" placeholder="238521993">
+        </div>
+        <div class="eMoneyPin">
+          <label for="eMoneyPin" class="form-label">e-Money PIN</label>
+          <input type="number" name="" id="eMoneyPin" class="eMoneyPinInput" placeholder="6891">
+        </div>
+      </div>
+    </div>
+  </form>
+</main>

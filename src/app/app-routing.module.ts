@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SpeakersComponent } from './components/categories/speakers/speakers.component';
 import { EarphonesComponent } from './components/categories/earphones/earphones.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,9 @@ const routes: Routes = [
   },
   {
     path: 'product/:id', component: ProductDetailComponent
+  },
+  {
+    path: 'checkout', component: CheckoutComponent
   }
 ];
 

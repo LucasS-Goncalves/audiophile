@@ -13,6 +13,8 @@ import { SpeakersComponent } from './components/categories/speakers/speakers.com
 import { ListOfProductsComponent } from './components/categories/list-of-products/list-of-products.component';
 import { EarphonesComponent } from './components/categories/earphones/earphones.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     SpeakersComponent,
     ListOfProductsComponent,
     EarphonesComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
