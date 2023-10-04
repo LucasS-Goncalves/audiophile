@@ -1,15 +1,82 @@
-.main{
+.checkout-section{
   width: 327px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem 0;
+  background-color: var(--white);
+  border-radius: 12px;
+}
+
+.title{
+  width: 280px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--black-1);
+}
+
+.form{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
 
-.title{
-  font-size: 1.75rem;
+.form .formSection-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form .formSection-container .formSection-container-title{
+  font-size: .8125rem;
   font-weight: 700;
-  letter-spacing: 1px;
+  line-height: 25px;
+  letter-spacing: .93px;
   text-transform: uppercase;
+  color: var(--light-brown);
+}
+
+.form .formSection-container .inputsText-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form .formSection-container .inputsText-container .input-container{
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.form .formSection-container .inputsText-container .input-container .form-label{
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: -.21px;
+}
+
+.form .formSection-container .inputsText-container .input-container .form-input{
+  width: 280px;
+  height: 56px;
+  padding: 0 1.4rem;
+  border: 1px solid var(--grey-4);
+  border-radius: 7px;
+  outline: none;
+  caret-color: var(--light-brown);
+}
+
+.form .formSection-container .inputsText-container .input-container .form-input::placeholder{
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: -.25px;
   color: var(--black-1);
+  opacity: .4;
+}
+
+.form .formSection-container .inputsText-container .input-container .form-input:focus{
+  border: 1px solid var(--light-brown);
 }

@@ -24,10 +24,10 @@
 }
 
 .main{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1.8rem;
 }
 
 @media(min-width: 768px){
@@ -38,10 +38,6 @@
 
   .header .navbar{
     width: 689px;
-  }
-
-  .main{
-    margin-top: 1.5rem;
   }
 }
 
@@ -67,9 +63,5 @@
   .header .navbar .link:hover{
     color: var(--light-brown);
     opacity: 1;
-  }
-
-  .main{
-    margin-top: 3.3rem;
   }
 }
