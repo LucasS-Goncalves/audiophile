@@ -57,24 +57,29 @@
         <h2 class="formSection-container-title">
           payment details
         </h2>
-        <div class="inputRadio-container">
-          <div class="radioInput-container">
-            <label for="eMoney" class="form-label">e-Money</label>
-            <input type="radio" name="payment" id="eMoney" class="eMoneyRadioInput form-input">
-          </div>
-          <div class="radioInput-container">
-            <label for="cash" class="form-label">Cash on Delivery</label>
-            <input type="radio" name="payment" id="cash" class="cashRadioInput form-input">
+        <div class="paymentMethod-container">
+          <h3 class="paymentMethod-container-title">
+            Payment Method
+          </h3>
+          <div class="inputsRadio-container">
+            <div class="radioInput-container" [ngClass]="{'checked': eMoney}">
+              <input type="radio" name="payment" id="eMoney" class="radio" (change)="setPaymentMethodToEMoney()">
+              <label for="eMoney" class="form-label">e-Money</label>
+            </div>
+            <div class="radioInput-container" [ngClass]="{'checked': cash}">
+              <input type="radio" name="payment" id="cash" class="radio" (change)="setPaymentMethodToCash()">
+              <label for="cash" class="form-label">Cash on Delivery</label>
+            </div>
           </div>
         </div>
         <div class="eMoney_info">
-          <div class="eMoneyNumber">
+          <div class="input-container">
             <label for="eMoneyNumber" class="form-label">e-Money Number</label>
-            <input type="number" name="" id="eMoneyNumber" class="eMoneyNumberInput" placeholder="238521993">
+            <input type="number" name="" id="eMoneyNumber" class="form-input" placeholder="238521993">
           </div>
-          <div class="eMoneyPin">
+          <div class="input-container">
             <label for="eMoneyPin" class="form-label">e-Money PIN</label>
-            <input type="number" name="" id="eMoneyPin" class="eMoneyPinInput" placeholder="6891">
+            <input type="number" name="" id="eMoneyPin" class="form-input" placeholder="6891">
           </div>
         </div>
       </div>

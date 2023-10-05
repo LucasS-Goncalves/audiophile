@@ -26,10 +26,25 @@
   gap: 2rem;
 }
 
+.form-input{
+  width: 280px;
+  height: 56px;
+  padding: 0 1.4rem;
+  border: 1px solid var(--grey-4);
+  border-radius: 7px;
+  outline: none;
+  caret-color: var(--light-brown);
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: -.25px;
+  color: var(--black-1);
+}
+
 .form .formSection-container{
+  width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
 }
 
 .form .formSection-container .formSection-container-title{
@@ -44,7 +59,7 @@
 .form .formSection-container .inputsText-container{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.4rem;
 }
 
 .form .formSection-container .inputsText-container .input-container{
@@ -57,9 +72,106 @@
   font-size: .75rem;
   font-weight: 700;
   letter-spacing: -.21px;
+  color: var(--black-1);
 }
 
 .form .formSection-container .inputsText-container .input-container .form-input{
+
+}
+
+.form .formSection-container .inputsText-container .input-container .form-input::placeholder{
+  opacity: .4;
+  color: var(--black-1);
+}
+
+.form .formSection-container .inputsText-container .input-container .form-input:focus{
+  border: 1px solid var(--light-brown);
+}
+
+.form .formSection-container .paymentMethod-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form .formSection-container .paymentMethod-container .paymentMethod-container-title{
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: -.21px;
+  color: var(--black-1);
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container{
+  width: 280px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--grey-4);
+  border-radius: 7px;
+  padding: 0 1.4rem;
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container.checked{
+  border: 1px solid var(--light-brown);
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .radio{
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+    border: 1px solid var(--grey-4);
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .radio:checked::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: var(--light-brown);
+}
+
+.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .form-label{
+  font-size: .875rem;
+  font-weight: 700;
+  letter-spacing: -.25px;
+  color: var(--black-1);
+}
+
+.form .formSection-container .eMoney_info{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.form .formSection-container .eMoney_info .input-container{
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+
+.form .formSection-container .eMoney_info .input-container .form-label{
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: -.21px;
+  color: var(--black-1);
+}
+
+.form .formSection-container .eMoney_info .input-container .form-input{
   width: 280px;
   height: 56px;
   padding: 0 1.4rem;
@@ -67,16 +179,13 @@
   border-radius: 7px;
   outline: none;
   caret-color: var(--light-brown);
-}
-
-.form .formSection-container .inputsText-container .input-container .form-input::placeholder{
   font-size: .875rem;
   font-weight: 700;
   letter-spacing: -.25px;
   color: var(--black-1);
-  opacity: .4;
 }
 
-.form .formSection-container .inputsText-container .input-container .form-input:focus{
-  border: 1px solid var(--light-brown);
+.form .formSection-container .eMoney_info .input-container .form-input::placeholder{
+  opacity: .4;
+  color: var(--black-1);
 }

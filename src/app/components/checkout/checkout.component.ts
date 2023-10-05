@@ -10,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class CheckoutComponent {
 
+  eMoney = false;
+  cash = false;
+
+  setPaymentMethodToEMoney(){
+    this.cash = false;
+    this.eMoney = true;
+  }
+
+  setPaymentMethodToCash(){
+    this.cash = true;
+    this.eMoney = false;
+  }
 }
