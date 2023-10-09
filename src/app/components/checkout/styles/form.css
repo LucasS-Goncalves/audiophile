@@ -11,7 +11,6 @@
 }
 
 .title{
-  width: 280px;
   font-size: 1.75rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -22,7 +21,7 @@
 .form{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
 }
 
@@ -150,4 +149,55 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: .5rem;
+}
+
+@media(min-width: 768px){
+
+  .checkout-section{
+    width: 689px;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+  }
+
+  .title{
+    font-size: 2rem;
+    line-height: 36px;
+    letter-spacing: 1.14px;
+  }
+
+  .form{
+    width: 634.5px;
+  }
+
+  .form-input{
+    width: 309px;
+    padding: 0 1.6rem;
+  }
+
+  .form .formSection-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+
+  .form .formSection-container .inputsText-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .singleInput-container{
+    width: 309px;
+  }
+
+  .form .formSection-container .inputsText-container .addressInput-container,
+  .form .formSection-container .inputsText-container .addressInput-container .addressInput{
+    width: 634px;
+  }
+
 }
