@@ -26,6 +26,13 @@
   gap: 2rem;
 }
 
+.form-label{
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: -.21px;
+  color: var(--black-1);
+}
+
 .form-input{
   width: 280px;
   height: 56px;
@@ -38,6 +45,17 @@
   font-weight: 700;
   letter-spacing: -.25px;
   color: var(--black-1);
+}
+
+.form-input::placeholder{
+  opacity: .4;
+  color: var(--black-1);
+}
+
+.singleInput-container{
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
 }
 
 .form .formSection-container{
@@ -62,29 +80,7 @@
   gap: 1.4rem;
 }
 
-.form .formSection-container .inputsText-container .input-container{
-  display: flex;
-  flex-direction: column;
-  gap: .7rem;
-}
-
-.form .formSection-container .inputsText-container .input-container .form-label{
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: -.21px;
-  color: var(--black-1);
-}
-
-.form .formSection-container .inputsText-container .input-container .form-input{
-
-}
-
-.form .formSection-container .inputsText-container .input-container .form-input::placeholder{
-  opacity: .4;
-  color: var(--black-1);
-}
-
-.form .formSection-container .inputsText-container .input-container .form-input:focus{
+.form .formSection-container .inputsText-container .singleInput-container .form-input:focus{
   border: 1px solid var(--light-brown);
 }
 
@@ -107,7 +103,7 @@
   gap: 1rem;
 }
 
-.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container{
+.form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container{
   width: 280px;
   height: 56px;
   display: flex;
@@ -118,11 +114,11 @@
   padding: 0 1.4rem;
 }
 
-.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container.checked{
+.form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container.checked{
   border: 1px solid var(--light-brown);
 }
 
-.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .radio{
+.form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container .radio{
   position: relative;
   appearance: none;
   -webkit-appearance: none;
@@ -132,7 +128,7 @@
     border-radius: 100%;
 }
 
-.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .radio:checked::after{
+.form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container .radio:checked::after{
   content: "";
   position: absolute;
   top: 50%;
@@ -144,11 +140,9 @@
   background-color: var(--light-brown);
 }
 
-.form .formSection-container .paymentMethod-container .inputsRadio-container .radioInput-container .form-label{
+.form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container .form-label{
   font-size: .875rem;
-  font-weight: 700;
   letter-spacing: -.25px;
-  color: var(--black-1);
 }
 
 .form .formSection-container .eMoney_info{
@@ -156,36 +150,4 @@
   flex-direction: column;
   gap: 1rem;
   margin-top: .5rem;
-}
-
-.form .formSection-container .eMoney_info .input-container{
-  display: flex;
-  flex-direction: column;
-  gap: .7rem;
-}
-
-.form .formSection-container .eMoney_info .input-container .form-label{
-  font-size: .75rem;
-  font-weight: 700;
-  letter-spacing: -.21px;
-  color: var(--black-1);
-}
-
-.form .formSection-container .eMoney_info .input-container .form-input{
-  width: 280px;
-  height: 56px;
-  padding: 0 1.4rem;
-  border: 1px solid var(--grey-4);
-  border-radius: 7px;
-  outline: none;
-  caret-color: var(--light-brown);
-  font-size: .875rem;
-  font-weight: 700;
-  letter-spacing: -.25px;
-  color: var(--black-1);
-}
-
-.form .formSection-container .eMoney_info .input-container .form-input::placeholder{
-  opacity: .4;
-  color: var(--black-1);
 }
