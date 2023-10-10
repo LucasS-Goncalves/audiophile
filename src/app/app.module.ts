@@ -15,6 +15,7 @@ import { EarphonesComponent } from './components/categories/earphones/earphones.
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SummaryComponent } from './components/checkout/summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListOfProductsComponent,
     EarphonesComponent,
     ProductDetailComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,
