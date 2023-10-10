@@ -155,10 +155,6 @@
 
   .checkout-section{
     width: 689px;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    padding: 1.5rem 0;
   }
 
   .title{
@@ -171,16 +167,15 @@
     width: 634.5px;
   }
 
-  .form-input{
+  .form-input,
+  .form .formSection-container .paymentMethod-container .inputsRadio-container .singleRadioInput-container{
     width: 309px;
     padding: 0 1.6rem;
   }
 
   .form .formSection-container{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.4rem;
+    gap: .8rem;
   }
 
   .form .formSection-container .inputsText-container{
@@ -193,11 +188,22 @@
 
   .singleInput-container{
     width: 309px;
+    margin-top: .5rem;
   }
 
   .form .formSection-container .inputsText-container .addressInput-container,
   .form .formSection-container .inputsText-container .addressInput-container .addressInput{
     width: 634px;
+  }
+
+  .form .formSection-container .paymentMethod-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form .formSection-container .eMoney_info{
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
 }
