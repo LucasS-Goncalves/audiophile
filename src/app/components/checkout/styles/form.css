@@ -155,6 +155,7 @@
 
   .checkout-section{
     width: 689px;
+    padding: 1.8rem 0;
   }
 
   .title{
@@ -180,7 +181,6 @@
 
   .form .formSection-container .inputsText-container{
     width: 100%;
-    display: flex;
     flex-direction: row;
     gap: 1rem;
     flex-wrap: wrap;
@@ -205,5 +205,17 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+}
 
+@media(min-width: 1200px){
+
+  .checkout-section{
+    width: 730px;
+    margin-top: 2.5rem;
+    padding: 3.5rem 0;
+  }
+
+  .form{
+    gap: 3.2rem;
+  }
 }
