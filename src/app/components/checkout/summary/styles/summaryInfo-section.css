@@ -1,0 +1,11 @@
+.summary-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.summary-info .value-container{
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
