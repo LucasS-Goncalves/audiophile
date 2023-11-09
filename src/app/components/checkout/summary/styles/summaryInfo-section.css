@@ -60,3 +60,10 @@
   color: var(--white);
   background-color: var(--light-brown);
 }
+
+@media(min-width: 768px){
+
+  .summary-info .pay-button{
+    width: 623px;
+  }
+}

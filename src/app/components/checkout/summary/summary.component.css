@@ -5,6 +5,7 @@
   justify-content: center;
   background-color: var(--white);
   margin-top: 2rem;
+  margin-bottom: 7rem;
   padding: 1.5rem 0;
   border-radius: 12px;
 }
@@ -28,7 +29,13 @@
 
   .main{
     width: 689px;
+    margin-bottom: 8rem;
     padding: 1.8rem 0;
+  }
+
+  .main .main-container{
+    width: 623px;
+    gap: 3rem;
   }
 }
 
