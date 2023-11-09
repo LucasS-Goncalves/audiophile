@@ -67,3 +67,17 @@
     width: 623px;
   }
 }
+
+@media(min-width: 1200px){
+
+  .summary-info .pay-button{
+    width: 284px;
+    transition: .3s;
+    cursor: pointer;
+  }
+
+  .summary-info .pay-button:hover{
+    background-color: var(--bege);
+  }
+}
+

@@ -64,4 +64,15 @@
     color: var(--light-brown);
     opacity: 1;
   }
+
+  .main{
+    margin-bottom: 8rem;
+  }
+
+  .main-container{
+    width: 1110px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }

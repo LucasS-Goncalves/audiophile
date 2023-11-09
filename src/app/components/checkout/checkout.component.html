@@ -6,86 +6,87 @@
     </nav>
   </header>
 
-  <section class="checkout-section">
-    <form class="form">
-      <h1 class="title">checkout</h1>
-      <div class="formSection-container">
-        <h2 class="formSection-container-title">
-          billing details
-        </h2>
-        <div class="inputsText-container">
-          <div class="singleInput-container">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" name="" id="name" class="nameInput form-input" placeholder="Alexei Ward">
-          </div>
-          <div class="singleInput-container">
-            <label for="email" class="form-label">Email Address</label>
-            <input type="email" name="" id="email" class="emailInput form-input" placeholder="alexei@mail.com">
-          </div>
-          <div class="singleInput-container">
-            <label for="phone" class="form-label">Phone Number</label>
-            <input type="tel" name="" id="phone" class="phoneInput form-input" placeholder="+1 202-555-0136">
-          </div>
-        </div>
-      </div>
-
-      <div class="formSection-container">
-        <h2 class="formSection-container-title">
-          shopping info
-        </h2>
-        <div class="inputsText-container">
-          <div class="singleInput-container addressInput-container">
-            <label for="address" class="form-label">Your Address</label>
-            <input type="text" name="" id="address" class="addressInput form-input" placeholder="1137 Williams Avenue">
-          </div>
-          <div class="singleInput-container">
-            <label for="zipCode" class="form-label">ZIP Code</label>
-            <input type="number" name="" id="zipCode" class="zipCodeInput form-input" placeholder="10001">
-          </div>
-          <div class="singleInput-container">
-            <label for="city" class="form-label">City</label>
-            <input type="text" name="" id="city" class="cityInput form-input" placeholder="New York">
-          </div>
-          <div class="singleInput-container">
-            <label for="country" class="form-label">Country</label>
-            <input type="text" name="" id="country" class="countryInput form-input" placeholder="United States">
-          </div>
-        </div>
-      </div>
-
-      <div class="formSection-container">
-        <h2 class="formSection-container-title">
-          payment details
-        </h2>
-        <div class="paymentMethod-container">
-          <h3 class="paymentMethod-container-title">
-            Payment Method
-          </h3>
-          <div class="inputsRadio-container">
-            <div class="singleRadioInput-container" [ngClass]="{'checked': eMoney}">
-              <input type="radio" name="payment" id="eMoney" class="radio" (change)="setPaymentMethodToEMoney()">
-              <label for="eMoney" class="form-label">e-Money</label>
+  <div class="main-container">
+    <section class="checkout-section">
+      <form class="form">
+        <h1 class="title">checkout</h1>
+        <div class="formSection-container">
+          <h2 class="formSection-container-title">
+            billing details
+          </h2>
+          <div class="inputsText-container">
+            <div class="singleInput-container">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" name="" id="name" class="nameInput form-input" placeholder="Alexei Ward">
             </div>
-            <div class="singleRadioInput-container" [ngClass]="{'checked': cash}">
-              <input type="radio" name="payment" id="cash" class="radio" (change)="setPaymentMethodToCash()">
-              <label for="cash" class="form-label">Cash on Delivery</label>
+            <div class="singleInput-container">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" name="" id="email" class="emailInput form-input" placeholder="alexei@mail.com">
+            </div>
+            <div class="singleInput-container">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" name="" id="phone" class="phoneInput form-input" placeholder="+1 202-555-0136">
             </div>
           </div>
         </div>
-        <div class="eMoney_info">
-          <div class="singleInput-container">
-            <label for="eMoneyNumber" class="form-label">e-Money Number</label>
-            <input type="number" name="" id="eMoneyNumber" class="form-input" placeholder="238521993">
-          </div>
-          <div class="singleInput-container">
-            <label for="eMoneyPin" class="form-label">e-Money PIN</label>
-            <input type="number" name="" id="eMoneyPin" class="form-input" placeholder="6891">
+
+        <div class="formSection-container">
+          <h2 class="formSection-container-title">
+            shopping info
+          </h2>
+          <div class="inputsText-container">
+            <div class="singleInput-container addressInput-container">
+              <label for="address" class="form-label">Your Address</label>
+              <input type="text" name="" id="address" class="addressInput form-input" placeholder="1137 Williams Avenue">
+            </div>
+            <div class="singleInput-container">
+              <label for="zipCode" class="form-label">ZIP Code</label>
+              <input type="number" name="" id="zipCode" class="zipCodeInput form-input" placeholder="10001">
+            </div>
+            <div class="singleInput-container">
+              <label for="city" class="form-label">City</label>
+              <input type="text" name="" id="city" class="cityInput form-input" placeholder="New York">
+            </div>
+            <div class="singleInput-container">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" name="" id="country" class="countryInput form-input" placeholder="United States">
+            </div>
           </div>
         </div>
-      </div>
-    </form>
-  </section>
 
-  <app-summary></app-summary>
+        <div class="formSection-container">
+          <h2 class="formSection-container-title">
+            payment details
+          </h2>
+          <div class="paymentMethod-container">
+            <h3 class="paymentMethod-container-title">
+              Payment Method
+            </h3>
+            <div class="inputsRadio-container">
+              <div class="singleRadioInput-container" [ngClass]="{'checked': eMoney}">
+                <input type="radio" name="payment" id="eMoney" class="radio" (change)="setPaymentMethodToEMoney()">
+                <label for="eMoney" class="form-label">e-Money</label>
+              </div>
+              <div class="singleRadioInput-container" [ngClass]="{'checked': cash}">
+                <input type="radio" name="payment" id="cash" class="radio" (change)="setPaymentMethodToCash()">
+                <label for="cash" class="form-label">Cash on Delivery</label>
+              </div>
+            </div>
+          </div>
+          <div class="eMoney_info">
+            <div class="singleInput-container">
+              <label for="eMoneyNumber" class="form-label">e-Money Number</label>
+              <input type="number" name="" id="eMoneyNumber" class="form-input" placeholder="238521993">
+            </div>
+            <div class="singleInput-container">
+              <label for="eMoneyPin" class="form-label">e-Money PIN</label>
+              <input type="number" name="" id="eMoneyPin" class="form-input" placeholder="6891">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
 
+    <app-summary></app-summary>
+  </div>
 </main>
