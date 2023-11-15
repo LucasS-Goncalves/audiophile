@@ -1,0 +1,86 @@
+<article class="container">
+  <header class="header">
+    <img src="../../../../assets/checkout/icon-order-confirmation.svg" alt="Order confirmation icon" class="icon">
+    <h2 class="header-title">
+      THANK YOU FOR YOUR ORDER
+    </h2>
+    <p class="header-text">
+      You will receive an email confirmation shortly.
+    </p>
+  </header>
+  <main class="products_and_price">
+    <div class="productsList-container">
+      <ul class="summary-products" [ngClass]="{'showItems': showItems}">
+        <li class="summary-products-product">
+          <div class="productContainer">
+            <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product   image" class="summary-products-productImg">
+            <article class="product-info">
+              <div class="product-name_and_price">
+                <h4 class="product-name_and_price-name">
+                  XX99 MK II
+                </h4>
+                <p class="product-name_and_price-price">
+                  $ 2,999
+                </p>
+              </div>
+              <div class="product-amount">
+                x1
+              </div>
+            </article>
+        </div>
+        </li>
+        <li class="summary-products-product">
+          <div class="productContainer">
+            <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product image" class="summary-products-productImg">
+            <article class="product-info">
+              <div class="product-name_and_price">
+                <h4 class="product-name_and_price-name">
+                  XX99 MK II
+                </h4>
+                <p class="product-name_and_price-price">
+                  $ 2,999
+                </p>
+              </div>
+              <div class="product-amount">
+                x1
+              </div>
+            </article>
+          </div>
+        </li>
+        <li class="summary-products-product">
+          <div class="productContainer">
+            <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product image" class="summary-products-productImg">
+            <article class="product-info">
+              <div class="product-name_and_price">
+                <h4 class="product-name_and_price-name">
+                  XX99 MK II
+                </h4>
+                <p class="product-name_and_price-price">
+                  $ 2,999
+                </p>
+              </div>
+              <div class="product-amount">
+                x1
+              </div>
+            </article>
+          </div>
+        </li>
+      </ul>
+      <span class="displayList">View less</span>
+    </div>
+    <div class="totalPrice">
+      <article class="totalPrice-container">
+        <h5 class="totalPrice-title">
+          grand total
+        </h5>
+        <p class="totalPrice-price">
+          $ 5,532
+        </p>
+      </article>
+    </div>
+  </main>
+  <button class="see_product-button">
+    BACK TO HOME
+  </button>
+</article>
+<button (click)="showItems = !showItems">TESTE</button>

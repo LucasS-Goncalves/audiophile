@@ -5,13 +5,15 @@ import { Component } from '@angular/core';
   templateUrl: './checkout.component.html',
   styleUrls: [
     './checkout.component.css',
-    './styles/form.css'
+    './styles/form.css',
+    './styles/ordered.css'
   ]
 })
 export class CheckoutComponent {
 
-  eMoney = false;
+  eMoney = true;
   cash = false;
+  teste = false;
 
   setPaymentMethodToEMoney(){
     this.cash = false;

@@ -151,6 +151,27 @@
   margin-top: .5rem;
 }
 
+.form .formSection-container .cashInfo-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: .5rem;
+}
+
+.form .formSection-container .cashInfo-container .cashInfo-container-icon{
+  width: 48px;
+  height: 48px;
+}
+
+.form .formSection-container .cashInfo-container .cashInfo-container-paragraph{
+  font-size: .9375rem;
+  font-weight: 500;
+  line-height: 25px;
+  color: var(--black-1);
+  opacity: .5;
+}
+
 @media(min-width: 768px){
 
   .checkout-section{
@@ -205,6 +226,15 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .form .formSection-container .cashInfo-container{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form .formSection-container .cashInfo-container .cashInfo-container-paragraph{
+    width: 554px;
+  }
 }
 
 @media(min-width: 1200px){
@@ -218,4 +248,5 @@
   .form{
     gap: 3.2rem;
   }
+
 }
