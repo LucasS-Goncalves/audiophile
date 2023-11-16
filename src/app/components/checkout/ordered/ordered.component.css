@@ -4,8 +4,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 2.2rem 0;
+  padding: 2.4rem 0;
   border-radius: 12px;
+  background-color: var(--white);
 }
 
 .container .header{
@@ -40,7 +41,6 @@
   width: 263px;
   display: flex;
   flex-direction: column;
-
 }
 
 .container .products_and_price .productsList-container{
@@ -49,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1.2rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
   background-color: var(--grey-1);
   border-radius: 8px 8px 0 0;
 }
@@ -98,12 +98,6 @@
   display: block;
 }
 
-
-
-
-
-
-
 .container .products_and_price .productsList-container .summary-products .summary-products-product .productContainer .summary-products-productImg{
   width: 50px;
   border-radius: 7px;
@@ -148,7 +142,7 @@
 .container .totalPrice{
   width: 263px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-color: var(--black-1);
   padding: 1.4rem;
   border-radius: 0 0 8px 8px;
@@ -180,4 +174,59 @@
   height: 48px;
   background-color: var(--light-brown);
   color: var(--white);
+}
+
+@media(min-width: 768px){
+
+  .container{
+    width: 540px;
+    padding: 2.6 0rem;
+  }
+
+  .container .header{
+    width: 444px;
+  }
+
+  .container .products_and_price{
+    width: 444px;
+    flex-direction: row;
+  }
+
+  .container .header .header-title{
+    font-size: 2rem;
+    line-height: 36px;
+    letter-spacing: 1.14px;
+  }
+
+  .container .products_and_price .productsList-container{
+    width: 246px;
+    border-radius: 8px 0 0 8px;
+  }
+
+  .container .totalPrice{
+    width: 198px;
+    padding: 0rem 0 2.5rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .see_product-button{
+    width: 444px;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .container .products_and_price .productsList-container .displayList{
+    cursor: pointer;
+  }
+
+  .see_product-button{
+    width: 444px;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .see_product-button:hover{
+    background-color: var(--bege);
+  }
 }

@@ -66,7 +66,8 @@
           </div>
         </li>
       </ul>
-      <span class="displayList">View less</span>
+      <span class="displayList" (click)="showItems = !showItems" *ngIf="showItems">View less</span>
+      <span class="displayList" (click)="showItems = !showItems" *ngIf="!showItems">and 2 other item(s)</span>
     </div>
     <div class="totalPrice">
       <article class="totalPrice-container">
@@ -79,8 +80,7 @@
       </article>
     </div>
   </main>
-  <button class="see_product-button">
+  <button class="see_product-button" routerLink="/">
     BACK TO HOME
   </button>
 </article>
-<button (click)="showItems = !showItems">TESTE</button>
