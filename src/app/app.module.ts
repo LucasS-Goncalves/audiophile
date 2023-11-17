@@ -17,6 +17,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SummaryComponent } from './components/checkout/summary/summary.component';
 import { OrderedComponent } from './components/checkout/ordered/ordered.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { OrderedComponent } from './components/checkout/ordered/ordered.componen
     ProductDetailComponent,
     CheckoutComponent,
     SummaryComponent,
-    OrderedComponent
+    OrderedComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
