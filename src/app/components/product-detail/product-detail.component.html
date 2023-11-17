@@ -30,13 +30,13 @@
       </div>
       <div class="buttons_container">
         <div class="amountButton-container">
-          <button class="decrease-button">-</button>
+          <button class="decrease-button" (click)="decreaseAmount()" [disabled]="amount === 1">-</button>
           <span class="amount">
-            1
+            {{amount}}
           </span>
-          <button class="increase-button">+</button>
+          <button class="increase-button" (click)="increaseAmount()">+</button>
         </div>
-        <button class="addToCart-button">
+        <button class="addToCart-button" (click)="addToCart()">
           ADD TO CART
         </button>
       </div>

@@ -75,7 +75,7 @@ export const products: Product[] = [
   {
     id: "xx99mark1",
     productImages: {
-      imgMobile: "../assets/product-xx59-headphones/mobile/image-product.jpg",
+      imgMobile: "../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg",
       imgTablet: "../assets/product-xx99-mark-one-headphones/tablet/image-product.jpg",
       imgDesktop: "../assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
     },

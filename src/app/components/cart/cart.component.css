@@ -102,6 +102,7 @@
   opacity: .25;
   background-color: transparent;
   border: none;
+  color: var(--black-1);
 }
 
 .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container .amount{
