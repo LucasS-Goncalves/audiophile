@@ -159,4 +159,18 @@
   .cartContainer .see_product-button:hover{
     background-color: var(--bege);
   }
+
+  .cartContainer .header .removeAll,
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container .decrease-button,
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container .increase-button{
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .cartContainer .header .removeAll:hover,
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container .decrease-button:hover,
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container .increase-button:hover{
+    color: var(--light-brown);
+    opacity: 1;
+  }
 }
