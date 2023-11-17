@@ -148,3 +148,15 @@
     width: 313px;
   }
 }
+
+@media(min-width: 1200px){
+
+  .cartContainer .see_product-button{
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .cartContainer .see_product-button:hover{
+    background-color: var(--bege);
+  }
+}
