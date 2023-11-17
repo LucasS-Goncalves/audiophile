@@ -81,7 +81,8 @@
   display: none;
 }
 
-.overlay{
+.overlay.overlayMenu,
+.overlay.overlayCart{
   width: 100%;
   height: 100%;
   position: fixed;
@@ -95,15 +96,29 @@
   z-index: 1;
   transition: .1s;
 }
-.header.menuOpened ~ .overlay{
+
+.header.menuOpened ~ .overlayMenu{
   visibility: visible;
   opacity: .7;
   transition: .6s;
 }
 
+.header.cartOpened ~ .overlayCart{
+  visibility: visible;
+  opacity: .7;
+  transition: .6s;
+}
+
+.header.cartOpened .cart-div{
+  display: block;
+}
+
 .cart-div{
+  display: none;
   position: absolute;
-  top: 100%;
+  top: calc(100% + 30px);
+  left: 50%;
+  translate: -50% 0;
   z-index: 999;
 }
 
@@ -133,6 +148,12 @@
     padding-top: 110px;
   }
 
+  .cart-div{
+    left: initial;
+    translate: initial;
+    right: 2.5rem;
+  }
+
 }
 
 @media(min-width: 1200px){
@@ -153,6 +174,7 @@
 
   .header .header_container .cartButton{
     margin-right: 0;
+    cursor: pointer;
   }
 
   .header .header_container .hamburgerButton{
@@ -193,5 +215,9 @@
 
   .header .header_container .nav__forDesktop .categoriesList-links .link:hover{
     color: var(--light-brown);
+  }
+
+  .cart-div{
+    right: 0;
   }
 }

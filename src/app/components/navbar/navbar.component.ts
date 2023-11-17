@@ -7,6 +7,7 @@ import { Component, HostListener } from '@angular/core';
 })
 export class NavbarComponent{
 
+  isCartOpened = false;
   isMenuOpened = false;
   innerWidth: any;
   showAppCategory = false;
@@ -40,5 +41,9 @@ export class NavbarComponent{
   openMenu(){
     this.isMenuOpened  = !this.isMenuOpened;
     this.showAppCategory = !this.showAppCategory;
+  }
+
+  openCart(){
+    this.isCartOpened = !this.isCartOpened;
   }
 }
