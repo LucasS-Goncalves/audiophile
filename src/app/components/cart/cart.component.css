@@ -31,9 +31,6 @@
   text-decoration: underline;
 }
 
-
-
-
 .cartContainer .summary-products{
   width: 100%;
   display: flex;
@@ -84,8 +81,6 @@
   opacity: .5;
   color: var(--black-1);
 }
-
-
 
 .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container{
   width: 96px;
@@ -140,4 +135,16 @@
   width: 271px;
   background-color: var(--light-brown);
   color: var(--white);
+}
+
+@media(min-width: 768px){
+
+  .cartContainer{
+    width: 377px;
+    padding: 2.5rem 2rem;
+  }
+
+  .cartContainer .see_product-button{
+    width: 313px;
+  }
 }
