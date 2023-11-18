@@ -27,7 +27,11 @@ export class CartService{
       this.cartItemsChanged.next(this.cartItems.slice());
     }
     this.numberOfItemsChanged.next(this.cartItems.length);
+    this.changeTotalPrice();
 
+  }
+
+  changeTotalPrice(){
     let total = 0;
     for(let i = 0; i < this.cartItems.length; i++){
       total += (+this.cartItems[i].price.replace(",", "") * +this.cartItems[i].amount);
@@ -35,8 +39,12 @@ export class CartService{
     this.priceChanged.next(total);
   }
 
-  changeAmountOfItem(){
-
+  changeAmountOfItemInTheCart(index: number, operation: string){
+    const item = this.cartItems[index];
+    const newItem = new CartItem(item.id, item.name, item.price, item.image, operation === "increase" ? item.amount + 1 : item.amount - 1);
+    this.cartItems[index] = newItem;
+    this.cartItemsChanged.next(this.cartItems);
+    this.changeTotalPrice();
   }
 
   clearCartItems(){

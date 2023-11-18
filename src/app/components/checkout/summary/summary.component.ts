@@ -1,4 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CartService } from 'src/app/cart.service';
+import { CartItem } from 'src/app/interfaces/cartItem';
 
 @Component({
   selector: 'app-summary',
@@ -9,9 +13,19 @@ import { Component, EventEmitter, Output } from '@angular/core';
     './styles/summaryInfo-section.css'
   ]
 })
-export class SummaryComponent {
+export class SummaryComponent implements OnInit{
+
+  items!: Observable<CartItem[]>;
+  totalPriceOfItems!: BehaviorSubject<number>;
 
   @Output() order = new EventEmitter();
+
+  constructor(private cartService: CartService){}
+
+  ngOnInit(): void {
+    this.items = this.cartService.cartItemsChanged;
+    this.totalPriceOfItems = this.cartService.priceChanged;
+  }
 
   onOrder(){
     this.order.emit();

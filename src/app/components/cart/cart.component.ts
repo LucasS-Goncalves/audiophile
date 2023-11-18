@@ -13,26 +13,19 @@ export class CartComponent implements OnInit, OnDestroy{
   totalPrice!: Observable<number>;
   numberOfItems!: Observable<number>;
   cartItems!: Observable<CartItem[]>;
-  cartItemsSubscription!: Subscription;
-  numberOfItemsSubscription!: Subscription;
-  totalPriceSubscription!: Subscription;
 
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.cartItemsChanged
+    this.cartItems = this.cartService.cartItemsChanged;
 
     this.numberOfItems = this.cartService.numberOfItemsChanged;
 
     this.totalPrice = this.cartService.priceChanged;
   }
 
-  increaseAmount(){
-
-  }
-
-  decreaseAmount(){
-
+  changeAmountInTheCart(index: number, operation: string){
+    this.cartService.changeAmountOfItemInTheCart(index, operation);
   }
 
   removeItems(){
@@ -40,8 +33,5 @@ export class CartComponent implements OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
-    this.numberOfItemsSubscription.unsubscribe();
-    this.totalPriceSubscription.unsubscribe();
-    this.cartItemsSubscription.unsubscribe();
   }
 }

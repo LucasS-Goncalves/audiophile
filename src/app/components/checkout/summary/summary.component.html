@@ -5,51 +5,18 @@
     </h2>
     <section class="summary-products">
       <ul class="products_list">
-        <li class="summary-products-product">
-          <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product image" class="summary-products-productImg">
+        <li class="summary-products-product" *ngFor="let item of items | async">
+          <img [src]="item.image" alt="Product image" class="summary-products-productImg">
           <article class="product-info">
             <div class="product-name_and_price">
-              <h4 class="product-name_and_price-name">
-                XX99 MK II
+              <h4 class="product-name_and_price-name" [innerHTML]="item.name">
               </h4>
               <p class="product-name_and_price-price">
-                $ 2,999
+                $ {{item.price}}
               </p>
             </div>
             <div class="product-amount">
-              x1
-            </div>
-          </article>
-        </li>
-        <li class="summary-products-product">
-          <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product image" class="summary-products-productImg">
-          <article class="product-info">
-            <div class="product-name_and_price">
-              <h4 class="product-name_and_price-name">
-                XX99 MK II
-              </h4>
-              <p class="product-name_and_price-price">
-                $ 2,999
-              </p>
-            </div>
-            <div class="product-amount">
-              x1
-            </div>
-          </article>
-        </li>
-        <li class="summary-products-product">
-          <img src="../../../../assets/product-xx59-headphones/mobile/image-product.jpg" alt="Product image" class="summary-products-productImg">
-          <article class="product-info">
-            <div class="product-name_and_price">
-              <h4 class="product-name_and_price-name">
-                XX99 MK II
-              </h4>
-              <p class="product-name_and_price-price">
-                $ 2,999
-              </p>
-            </div>
-            <div class="product-amount">
-              x1
+              x{{item.amount}}
             </div>
           </article>
         </li>
@@ -62,7 +29,7 @@
             total
           </h6>
           <p class="value-container-value">
-            $ 2000
+            $ {{ totalPriceOfItems | async | totalPrice}}
           </p>
         </div>
         <div class="value-container">
@@ -70,7 +37,7 @@
             shipping
           </h6>
           <p class="value-container-value">
-            $ 2000
+            $ 50
           </p>
         </div>
         <div class="value-container">
@@ -78,7 +45,7 @@
             vat(included)
           </h6>
           <p class="value-container-value">
-            $ 2000
+            $ 1,079
           </p>
         </div>
       </div>
@@ -87,7 +54,7 @@
           grand total
         </h6>
         <p class="total-container-value">
-          $ 2000
+          $ {{ (totalPriceOfItems | async )! + 50 | totalPrice}}
         </p>
       </div>
       <button class="pay-button see_product-button" (click)="onOrder()">
