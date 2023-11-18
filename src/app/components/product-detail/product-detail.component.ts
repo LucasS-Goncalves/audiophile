@@ -52,5 +52,6 @@ export class ProductDetailComponent implements OnInit{
 
   addToCart(){
     this.cartService.addItemToCart(this.id, this.amount);
+    this.amount = 1;
   }
 }

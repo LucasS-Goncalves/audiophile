@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { CartService } from 'src/app/cart.service';
 import { CartItem } from 'src/app/interfaces/cartItem';
 
@@ -10,9 +10,9 @@ import { CartItem } from 'src/app/interfaces/cartItem';
 })
 export class CartComponent implements OnInit, OnDestroy{
 
-  totalPrice = "0";
-  numberOfItems = 0;
-  cartItems: CartItem[] = [];
+  totalPrice!: Observable<number>;
+  numberOfItems!: Observable<number>;
+  cartItems!: Observable<CartItem[]>;
   cartItemsSubscription!: Subscription;
   numberOfItemsSubscription!: Subscription;
   totalPriceSubscription!: Subscription;
@@ -20,26 +20,11 @@ export class CartComponent implements OnInit, OnDestroy{
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.cartItems;
-    this.cartService.cartItemsChanged.subscribe(
-      (cartItems: CartItem[]) => {
-        this.cartItems = cartItems;
-      }
-    );
+    this.cartItems = this.cartService.cartItemsChanged
 
-    this.numberOfItemsSubscription = this.cartService.numberOfItemsChanged.subscribe(
-      (numberOfItems: number) => {
-        this.numberOfItems = numberOfItems;
-      }
-    );
+    this.numberOfItems = this.cartService.numberOfItemsChanged;
 
-    this.totalPriceSubscription = this.cartService.priceChanged.subscribe(
-      (totalPrice: number) => {
-        let number = totalPrice.toString().split('.');
-        number[0] = number[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        this.totalPrice = number.join('.');
-      }
-    );
+    this.totalPrice = this.cartService.priceChanged;
   }
 
   increaseAmount(){
@@ -47,7 +32,7 @@ export class CartComponent implements OnInit, OnDestroy{
   }
 
   decreaseAmount(){
-    
+
   }
 
   removeItems(){

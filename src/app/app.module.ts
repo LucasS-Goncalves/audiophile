@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SummaryComponent } from './components/checkout/summary/summary.component';
 import { OrderedComponent } from './components/checkout/ordered/ordered.component';
 import { CartComponent } from './components/cart/cart.component';
+import { TotalPricePipe } from './total-price.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CartComponent } from './components/cart/cart.component';
     CheckoutComponent,
     SummaryComponent,
     OrderedComponent,
-    CartComponent
+    CartComponent,
+    TotalPricePipe
   ],
   imports: [
     BrowserModule,

@@ -1,13 +1,13 @@
 <section class="cartContainer">
   <header class="header">
     <h4 class="header-title">
-      Cart ({{numberOfItems}})
+      Cart ({{numberOfItems | async}})
     </h4>
-    <button type="button" class="removeAll" (click)="removeItems()" [disabled]="cartItems.length === 0">Remove all</button>
+    <button type="button" class="removeAll" (click)="removeItems()" [disabled]="(cartItems|async)!.length === 0">Remove all</button>
   </header>
   <main>
     <ul class="summary-products">
-      <li class="summary-products-product" *ngFor="let item of cartItems; let i = index">
+      <li class="summary-products-product" *ngFor="let item of cartItems | async; let i = index">
         <div class="productContainer">
           <img [src]="item.image" alt="Product   image" class="summary-products-productImg">
           <article class="product-info">
@@ -35,7 +35,7 @@
       total
     </h6>
     <p class="total-container-value">
-      $ {{totalPrice}}
+      $ {{totalPrice | async | totalPrice}}
     </p>
   </div>
   <button class="see_product-button">
