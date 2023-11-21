@@ -54,4 +54,11 @@ export class CartService{
     this.numberOfItemsChanged.next(0);
   }
 
+  deleteItem(index: number){
+    this.numberOfItemsChanged.next((this.cartItems.length - 1));
+    this.cartItems.splice(index, 1);
+    this.changeTotalPrice();
+    this.cartItemsChanged.next(this.cartItems.slice());
+  }
+
 }

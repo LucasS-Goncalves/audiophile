@@ -27,5 +27,6 @@ export class CheckoutComponent {
 
   order(){
     this.modal.nativeElement.showModal();
+    window.scroll(0, 0)
   }
 }

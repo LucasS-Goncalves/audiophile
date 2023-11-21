@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { BehaviorSubject, Observable, Subscription } from 'rxjs';
 import { CartService } from 'src/app/cart.service';
 import { CartItem } from 'src/app/interfaces/cartItem';
@@ -13,6 +13,8 @@ export class CartComponent implements OnInit, OnDestroy{
   totalPrice!: Observable<number>;
   numberOfItems!: Observable<number>;
   cartItems!: Observable<CartItem[]>;
+
+  @Output() checkout = new EventEmitter();
 
   constructor(private cartService: CartService){}
 
@@ -30,6 +32,14 @@ export class CartComponent implements OnInit, OnDestroy{
 
   removeItems(){
     this.cartService.clearCartItems();
+  }
+
+  onDeleteItem(index: number){
+    this.cartService.deleteItem(index);
+  }
+
+  onCheckout(){
+    this.checkout.emit();
   }
 
   ngOnDestroy(): void {

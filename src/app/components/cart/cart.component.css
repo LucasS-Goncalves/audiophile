@@ -46,7 +46,18 @@
 .cartContainer .summary-products .summary-products-product .productContainer{
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: .5rem;
+}
+
+.cartContainer .summary-products .summary-products-product .deleteButton{
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.cartContainer .summary-products .summary-products-product .deleteButton img{
+  width: 20px;
 }
 
 .cartContainer .summary-products .summary-products-product .productContainer .summary-products-productImg{
@@ -83,12 +94,12 @@
 }
 
 .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container{
-  width: 96px;
+  width: 80px;
   height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   background-color: var(--grey-1);
 }
 
@@ -148,6 +159,18 @@
   .cartContainer .see_product-button{
     width: 313px;
   }
+
+  .cartContainer .summary-products .summary-products-product .productContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container{
+    width: 86px;
+    gap: 1.2rem;
+  }
+
 }
 
 @media(min-width: 1200px){
@@ -159,6 +182,15 @@
 
   .cartContainer .see_product-button:hover{
     background-color: var(--bege);
+  }
+
+  .cartContainer .summary-products .summary-products-product .deleteButton{
+    cursor: pointer;
+  }
+
+  .cartContainer .summary-products .summary-products-product .productContainer .amountButton-container{
+    width: 96px;
+    gap: 1.5rem;
   }
 
   .cartContainer .header .removeAll,
