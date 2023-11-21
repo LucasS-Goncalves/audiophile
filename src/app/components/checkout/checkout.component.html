@@ -8,53 +8,67 @@
 
   <div class="main-container">
     <section class="checkout-section">
-      <form class="form">
+      <form class="form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
         <h1 class="title">checkout</h1>
         <div class="formSection-container">
           <h2 class="formSection-container-title">
             billing details
           </h2>
-          <div class="inputsText-container">
+          <div class="inputsText-container" formGroupName="billing">
             <div class="singleInput-container">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" name="" id="name" class="nameInput form-input" placeholder="Alexei Ward">
+              <label for="name" class="form-label" [ngClass]="{'invalid': checkoutForm.get('billing.name')!.errors?.['required'] && checkoutForm.get('billing.name')?.touched || checkoutForm.get('billing.name')?.errors?.['pattern'] && checkoutForm.get('billing.name')?.touched}">Name</label>
+              <input type="text" formControlName="name" id="name" class="nameInput form-input" placeholder="Alexei Ward">
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.name')!.errors?.['required'] && checkoutForm.get('billing.name')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.name')?.errors?.['pattern'] && checkoutForm.get('billing.name')?.touched">Invalid name</span>
             </div>
             <div class="singleInput-container">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" name="" id="email" class="emailInput form-input" placeholder="alexei@mail.com">
+              <label for="email" class="form-label" [ngClass]="{'invalid': checkoutForm.get('billing.email')!.errors?.['required'] && checkoutForm.get('billing.email')?.touched || checkoutForm.get('billing.email')?.errors?.['email'] && checkoutForm.get('billing.email')?.touched}">Email Address</label>
+              <input type="email" formControlName="email" id="email" class="emailInput form-input" placeholder="alexei@mail.com">
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.email')?.errors?.['required'] && checkoutForm.get('billing.email')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.email')?.errors?.['email'] && checkoutForm.get('billing.email')?.touched">Wrong format</span>
             </div>
             <div class="singleInput-container">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" name="" id="phone" class="phoneInput form-input" placeholder="+1 202-555-0136">
+              <label for="phone" class="form-label" [ngClass]="{'invalid': checkoutForm.get('billing.phone')!.errors?.['required'] && checkoutForm.get('billing.phone')?.touched || checkoutForm.get('billing.phone')?.errors?.['pattern'] && checkoutForm.get('billing.phone')?.touched}">Phone Number</label>
+              <input type="tel" formControlName="phone" id="phone" class="phoneInput form-input" placeholder="+1 202-555-0136">
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.phone')?.errors?.['required'] && checkoutForm.get('billing.phone')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('billing.phone')?.errors?.['pattern'] && checkoutForm.get('billing.phone')?.touched">Wrong format</span>
             </div>
           </div>
         </div>
 
-        <div class="formSection-container">
+        <div class="formSection-container" formGroupName="shipping">
           <h2 class="formSection-container-title">
             shopping info
           </h2>
           <div class="inputsText-container">
             <div class="singleInput-container addressInput-container">
-              <label for="address" class="form-label">Your Address</label>
-              <input type="text" name="" id="address" class="addressInput form-input" placeholder="1137 Williams Avenue">
+              <label for="address" class="form-label" [ngClass]="{'invalid': checkoutForm.get('shipping.address')!.errors?.['required'] && checkoutForm.get('shipping.address')?.touched || checkoutForm.get('shipping.address')?.errors?.['pattern'] && checkoutForm.get('shipping.address')?.touched}">Your Address</label>
+              <input type="text" formControlName="address" id="address" class="addressInput form-input" placeholder="1137 Williams Avenue">
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.address')?.errors?.['required'] && checkoutForm.get('shipping.address')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.address')?.errors?.['pattern'] && checkoutForm.get('shipping.address')?.touched">Invalid address</span>
             </div>
             <div class="singleInput-container">
-              <label for="zipCode" class="form-label">ZIP Code</label>
-              <input type="number" name="" id="zipCode" class="zipCodeInput form-input" placeholder="10001">
+              <label for="zipCode" class="form-label" [ngClass]="{'invalid': checkoutForm.get('shipping.zipCode')!.errors?.['required'] && checkoutForm.get('shipping.zipCode')?.touched || checkoutForm.get('shipping.zipCode')?.errors?.['pattern'] && checkoutForm.get('shipping.zipCode')?.touched}">ZIP Code</label>
+              <input type="number" formControlName="zipCode" id="zipCode" class="zipCodeInput form-input" placeholder="10001">
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.zipCode')?.errors?.['required'] && checkoutForm.get('shipping.zipCode')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.zipCode')?.errors?.['pattern'] && checkoutForm.get('shipping.zipCode')?.touched">Invalid ZIP code</span>
             </div>
             <div class="singleInput-container">
-              <label for="city" class="form-label">City</label>
-              <input type="text" name="" id="city" class="cityInput form-input" placeholder="New York">
+              <label for="city" class="form-label" [ngClass]="{'invalid': checkoutForm.get('shipping.city')!.errors?.['required'] && checkoutForm.get('shipping.city')?.touched || checkoutForm.get('shipping.city')?.errors?.['pattern'] && checkoutForm.get('shipping.city')?.touched}">City</label>
+              <input type="text" formControlName="city" id="city" class="cityInput form-input" placeholder="New York">
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.city')?.errors?.['required'] && checkoutForm.get('shipping.city')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.city')?.errors?.['pattern'] && checkoutForm.get('shipping.city')?.touched">Invalid city</span>
             </div>
             <div class="singleInput-container">
-              <label for="country" class="form-label">Country</label>
-              <input type="text" name="" id="country" class="countryInput form-input" placeholder="United States">
+              <label for="country" class="form-label" [ngClass]="{'invalid': checkoutForm.get('shipping.country')!.errors?.['required'] && checkoutForm.get('shipping.country')?.touched || checkoutForm.get('shipping.country')?.errors?.['pattern'] && checkoutForm.get('shipping.country')?.touched}">Country</label>
+              <input type="text" formControlName="country" id="country" class="countryInput form-input" placeholder="United States">
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.country')?.errors?.['required'] && checkoutForm.get('shipping.country')?.touched">This field is required</span>
+              <span class="invalidInput" *ngIf="checkoutForm.get('shipping.country')?.errors?.['pattern'] && checkoutForm.get('shipping.country')?.touched">Invalid country</span>
             </div>
           </div>
         </div>
 
-        <div class="formSection-container">
+        <div class="formSection-container" formGroupName="payment">
           <h2 class="formSection-container-title">
             payment details
           </h2>
@@ -64,23 +78,26 @@
             </h3>
             <div class="inputsRadio-container">
               <div class="singleRadioInput-container" [ngClass]="{'checked': eMoney}" (click)="setPaymentMethodToEMoney()">
-                <input type="radio" name="payment" id="eMoney" class="radio" [checked]="eMoney">
-                <label for="eMoney" class="form-label">e-Money</label>
+                <input type="radio" formControlName="method" id="eMoney" value="eMoney" class="radio" [checked]="eMoney">
+                <label for="eMoney" class="form-label" [ngClass]="{'invalid': checkoutForm.get('payment.method')!.errors?.['required'] && checkoutForm.get('payment.method')?.touched || checkoutForm.get('payment.method')?.errors?.['pattern'] && checkoutForm.get('payment.method')?.touched}">e-Money</label>
               </div>
               <div class="singleRadioInput-container" [ngClass]="{'checked': cash}" (click)="setPaymentMethodToCash()">
-                <input type="radio" name="payment" id="cash" class="radio" [checked]="cash">
-                <label for="cash" class="form-label">Cash on Delivery</label>
+                <input type="radio" formControlName="method" id="cash" value="cash" class="radio" [checked]="cash">
+                <label for="cash" class="form-label" [ngClass]="{'invalid': checkoutForm.get('payment.method')!.errors?.['required'] && checkoutForm.get('payment.method')?.touched || checkoutForm.get('payment.method')?.errors?.['pattern'] && checkoutForm.get('payment.method')?.touched}">Cash on Delivery</label>
               </div>
+              <span class="invalidInput" *ngIf="checkoutForm.get('payment.method')?.errors?.['required'] && checkoutForm.get('payment.method')?.touched">This field is required</span>
             </div>
           </div>
           <div class="eMoney_info" *ngIf="eMoney; else cashInfo">
             <div class="singleInput-container">
-              <label for="eMoneyNumber" class="form-label">e-Money Number</label>
-              <input type="number" name="" id="eMoneyNumber" class="form-input" placeholder="238521993">
+              <label for="eMoneyNumber" class="form-label" [ngClass]="{'invalid': checkoutForm.get('payment.eMoneyNumber')!.errors?.['required'] && checkoutForm.get('payment.eMoneyNumber')?.touched || checkoutForm.get('payment.eMoneyNumber')?.errors?.['pattern'] && checkoutForm.get('payment.eMoneyNumber')?.touched}">e-Money Number</label>
+              <input type="number" formControlName="eMoneyNumber" id="eMoneyNumber" class="form-input" placeholder="238521993">
+              <span class="invalidInput" *ngIf="checkoutForm.get('payment.eMoneyNumber')?.errors?.['required'] && checkoutForm.get('payment.eMoneyNumber')?.touched">This field is required</span>
             </div>
             <div class="singleInput-container">
-              <label for="eMoneyPin" class="form-label">e-Money PIN</label>
-              <input type="number" name="" id="eMoneyPin" class="form-input" placeholder="6891">
+              <label for="eMoneyPin" class="form-label" [ngClass]="{'invalid': checkoutForm.get('payment.eMoneyPin')!.errors?.['required'] && checkoutForm.get('payment.eMoneyPin')?.touched || checkoutForm.get('payment.eMoneyPin')?.errors?.['pattern'] && checkoutForm.get('payment.eMoneyPin')?.touched}">e-Money PIN</label>
+              <input type="number" formControlName="eMoneyPin" id="eMoneyPin" class="form-input" placeholder="6891">
+              <span class="invalidInput" *ngIf="checkoutForm.get('payment.eMoneyPin')?.errors?.['required'] && checkoutForm.get('payment.eMoneyPin')?.touched">This field is required</span>
             </div>
           </div>
           <ng-template #cashInfo>
