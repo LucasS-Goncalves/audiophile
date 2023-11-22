@@ -7,6 +7,7 @@ import { SpeakersComponent } from './components/categories/speakers/speakers.com
 import { EarphonesComponent } from './components/categories/earphones/earphones.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { checkoutGuard } from './guard/checkout.guard';
 
 const routes: Routes = [
   {
@@ -25,7 +26,10 @@ const routes: Routes = [
     path: 'product/:id', component: ProductDetailComponent
   },
   {
-    path: 'checkout', component: CheckoutComponent
+    path: 'checkout', component: CheckoutComponent, canActivate: [checkoutGuard]
+  },
+  {
+    path: '**', redirectTo: ''
   }
 ];
 
