@@ -149,6 +149,10 @@
   color: var(--white);
 }
 
+.cartContainer .see_product-button.disabled{
+  background-color: var(--bege);
+}
+
 @media(min-width: 768px){
 
   .cartContainer{
@@ -182,6 +186,10 @@
 
   .cartContainer .see_product-button:hover{
     background-color: var(--bege);
+  }
+
+  .cartContainer .see_product-button.disabled{
+    cursor: default;
   }
 
   .cartContainer .summary-products .summary-products-product .deleteButton{

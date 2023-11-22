@@ -57,7 +57,7 @@
           $ {{ (totalPriceOfItems | async )! + 50 | totalPrice}}
         </p>
       </div>
-      <button class="pay-button see_product-button" (click)="onOrder()">
+      <button class="pay-button see_product-button" [ngClass]="{'disabled': !validForm}" (click)="onOrder()">
         continue & pay
       </button>
     </section>

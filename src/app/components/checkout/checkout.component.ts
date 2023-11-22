@@ -12,6 +12,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class CheckoutComponent implements OnInit, AfterViewInit{
 
   checkoutForm!: FormGroup;
+  validForm = false;
   eMoney = true;
   cash = false;
   teste = false;
@@ -38,6 +39,16 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
         'eMoneyPin': new FormControl(null, [Validators.required, Validators.pattern(/^\d+$/)])
       })
     });
+
+    this.checkoutForm.statusChanges.subscribe(
+      (status) => {
+        if(status === "INVALID") {
+          this.validForm = false;
+        } else if(status === "VALID") {
+          this.validForm = true;
+        }
+      }
+    )
   }
 
   ngAfterViewInit(): void {
@@ -53,13 +64,17 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
   setPaymentMethodToCash(){
     this.cash = true;
     this.eMoney = false;
-    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyNumber')?.removeValidators(Validators.required);
-    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyPin')?.removeValidators(Validators.required);
+    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyNumber')?.removeValidators([Validators.required, Validators.pattern(/^\d+$/)]);
+    //this.checkoutForm.get('payment.eMoneyNumber')?.removeValidators(Validators.required);
+
+    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyPin')?.removeValidators([Validators.required, Validators.pattern(/^\d+$/)]);
+    console.log(this.checkoutForm.valid);
+    console.log((this.checkoutForm.get('payment') as FormGroup).getError("eMoneyNumber"));
   }
 
   order(){
     if(this.checkoutForm.valid){
-      //this.modal.nativeElement.showModal();
+      this.modal.nativeElement.showModal();
       window.scroll(0, 0);
     }
   }
@@ -68,9 +83,5 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
     fieldList.forEach(field => {
         this.checkoutForm.get('payment')!.get(field)!.setValidators([Validators.required, Validators.pattern(/^\d+$/)]);
     });
-}
-
-  onSubmit(){
-
   }
 }

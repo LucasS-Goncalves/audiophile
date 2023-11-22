@@ -41,7 +41,7 @@
       $ {{totalPrice | async | totalPrice}}
     </p>
   </div>
-  <button class="see_product-button" [disabled]="(cartItems|async)!.length === 0" [routerLink]="['/checkout']" (click)="onCheckout()">
+  <button class="see_product-button" [ngClass]="{'disabled': (cartItems|async)!.length === 0}" [disabled]="(cartItems|async)!.length === 0" [routerLink]="['/checkout']" (click)="onCheckout()">
     Checkout
   </button>
 </section>

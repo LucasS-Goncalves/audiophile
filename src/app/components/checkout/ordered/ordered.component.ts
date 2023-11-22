@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { BehaviorSubject, Subscription } from 'rxjs';
 import { CartService } from 'src/app/cart.service';
 import { CartItem } from 'src/app/interfaces/cartItem';
 
@@ -11,7 +11,6 @@ import { CartItem } from 'src/app/interfaces/cartItem';
 export class OrderedComponent implements OnInit, OnDestroy{
 
   showItems = false;
-
   itemsSubscription!: Subscription;
   items: CartItem[] = [];
   totalPriceOfItems!: BehaviorSubject<number>;

@@ -8,7 +8,7 @@
 
   <div class="main-container">
     <section class="checkout-section">
-      <form class="form" [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+      <form class="form" [formGroup]="checkoutForm">
         <h1 class="title">checkout</h1>
         <div class="formSection-container">
           <h2 class="formSection-container-title">
@@ -109,7 +109,7 @@
         </div>
       </form>
     </section>
-    <app-summary (order)="order()"></app-summary>
+    <app-summary (order)="order()" [validForm]="validForm"></app-summary>
   </div>
 </main>
 <dialog #modal class="modal">

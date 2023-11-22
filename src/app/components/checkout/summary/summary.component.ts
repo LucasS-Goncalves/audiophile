@@ -1,5 +1,5 @@
 import { BehaviorSubject } from 'rxjs';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartService } from 'src/app/cart.service';
 import { CartItem } from 'src/app/interfaces/cartItem';
@@ -17,7 +17,7 @@ export class SummaryComponent implements OnInit{
 
   items!: Observable<CartItem[]>;
   totalPriceOfItems!: BehaviorSubject<number>;
-
+  @Input() validForm = false;
   @Output() order = new EventEmitter();
 
   constructor(private cartService: CartService){}
