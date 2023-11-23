@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
     './styles/form.css'
   ]
 })
-export class CheckoutComponent implements OnInit, AfterViewInit{
+export class CheckoutComponent implements OnInit{
 
   checkoutForm!: FormGroup;
   validForm = false;
@@ -49,10 +49,6 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
         }
       }
     )
-  }
-
-  ngAfterViewInit(): void {
-    this.addFormValidators(['eMoneyNumber', 'eMoneyPin']);
   }
 
   setPaymentMethodToEMoney(){

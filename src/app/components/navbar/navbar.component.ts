@@ -1,12 +1,16 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
+
+import { Observable } from 'rxjs';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent{
+export class NavbarComponent implements OnInit{
 
+  numberOfItems!: Observable<number>;
   isCartOpened = false;
   isMenuOpened = false;
   innerWidth: any;
@@ -29,6 +33,12 @@ export class NavbarComponent{
       width: 103
     },
   ];
+
+  constructor(private cartService: CartService){}
+
+  ngOnInit(): void {
+    this.numberOfItems = this.cartService.numberOfItemsChanged;
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(){

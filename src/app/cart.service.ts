@@ -8,7 +8,7 @@ import { BehaviorSubject, Subject } from "rxjs";
 })
 export class CartService{
 
-  cartItemsChanged= new BehaviorSubject<CartItem[]>([]);
+  cartItemsChanged = new BehaviorSubject<CartItem[]>([]);
   numberOfItemsChanged = new BehaviorSubject<number>(0);
   priceChanged = new BehaviorSubject<number>(0);
   cartItems: CartItem[] = [];

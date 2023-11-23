@@ -8,7 +8,7 @@ import { CartItem } from 'src/app/interfaces/cartItem';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit, OnDestroy{
+export class CartComponent implements OnInit{
 
   totalPrice!: Observable<number>;
   numberOfItems!: Observable<number>;
@@ -19,11 +19,9 @@ export class CartComponent implements OnInit, OnDestroy{
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.cartItemsChanged;
-
-    this.numberOfItems = this.cartService.numberOfItemsChanged;
-
-    this.totalPrice = this.cartService.priceChanged;
+    this.cartItems = this.cartService.cartItemsChanged.asObservable();
+    this.numberOfItems = this.cartService.numberOfItemsChanged.asObservable();
+    this.totalPrice = this.cartService.priceChanged.asObservable();
   }
 
   changeAmountInTheCart(index: number, operation: string){
@@ -40,8 +38,5 @@ export class CartComponent implements OnInit, OnDestroy{
 
   onCheckout(){
     this.checkout.emit();
-  }
-
-  ngOnDestroy(): void {
   }
 }

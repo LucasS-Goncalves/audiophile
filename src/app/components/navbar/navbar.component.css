@@ -42,7 +42,18 @@
 }
 
 .header .header_container .cartButton{
+  position: relative;
   margin-right: 1.5rem;
+}
+
+.header .header_container .cartButton .numberOfItems-cart{
+  position: absolute;
+  top: -35px;
+  right: 50%;
+  translate: 70% 100%;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--light-brown);
 }
 
 .header .header_container .logo{
@@ -175,6 +186,11 @@
   .header .header_container .cartButton{
     margin-right: 0;
     cursor: pointer;
+  }
+
+  .header .header_container .cartButton .numberOfItems-cart{
+    position: absolute;
+    top: -37px;
   }
 
   .header .header_container .hamburgerButton{
