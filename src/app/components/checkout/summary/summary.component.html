@@ -45,7 +45,7 @@
             vat(included)
           </h6>
           <p class="value-container-value">
-            $ 1,079
+            $ {{ ((totalPriceOfItems | async)! *.2).toFixed(0) | totalPrice }}
           </p>
         </div>
       </div>
