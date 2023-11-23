@@ -64,12 +64,12 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
   setPaymentMethodToCash(){
     this.cash = true;
     this.eMoney = false;
-    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyNumber')?.removeValidators([Validators.required, Validators.pattern(/^\d+$/)]);
-    //this.checkoutForm.get('payment.eMoneyNumber')?.removeValidators(Validators.required);
 
-    (this.checkoutForm.get('payment') as FormGroup).get('eMoneyPin')?.removeValidators([Validators.required, Validators.pattern(/^\d+$/)]);
-    console.log(this.checkoutForm.valid);
-    console.log((this.checkoutForm.get('payment') as FormGroup).getError("eMoneyNumber"));
+    this.checkoutForm.get('payment')?.get("eMoneyNumber")?.clearValidators();
+    this.checkoutForm.get('payment')?.get("eMoneyPin")?.clearValidators();
+
+    this.checkoutForm.get('payment')?.get("eMoneyNumber")?.updateValueAndValidity();
+    this.checkoutForm.get('payment')?.get("eMoneyPin")?.updateValueAndValidity();
   }
 
   order(){
@@ -82,6 +82,7 @@ export class CheckoutComponent implements OnInit, AfterViewInit{
   private addFormValidators(fieldList: string[] = []) {
     fieldList.forEach(field => {
         this.checkoutForm.get('payment')!.get(field)!.setValidators([Validators.required, Validators.pattern(/^\d+$/)]);
+        this.checkoutForm.get('payment')?.get(field)?.updateValueAndValidity();
     });
   }
 }
