@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { CartService } from 'src/app/cart.service';
 import { CartItem } from 'src/app/interfaces/cartItem';
@@ -15,7 +16,7 @@ export class OrderedComponent implements OnInit, OnDestroy{
   items: CartItem[] = [];
   totalPriceOfItems!: Observable<number>;
 
-  constructor(private cartService: CartService){}
+  constructor(private cartService: CartService, private router: Router){}
 
   ngOnInit(): void {
 
@@ -25,6 +26,11 @@ export class OrderedComponent implements OnInit, OnDestroy{
       }
     );
     this.totalPriceOfItems = this.cartService.priceChanged.asObservable();
+  }
+
+  onBackToHome(){
+    this.cartService.clearCartItems();
+    this.router.navigate(['']);
   }
 
   ngOnDestroy(): void {
