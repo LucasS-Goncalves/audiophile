@@ -28,7 +28,7 @@ To improve code clarity and maintainability, interfaces are employed throughout 
 
 <h2>//PT-BR//</h2>
 
-<p>"Este é o e-commerce Audiophile (peguei este design no site Frontend Mentor). O projeto abrange diversas funcionalidades, incluindo páginas dedicadas para fones de ouvido, alto-falantes e earphones, juntamente com uma página inicial e um carrinho de compras funcional. Utilizando conceitos-chave do Angular, como observables, behavior subjects, guards e interfaces, este projeto tem como objetivo aprimorar a manutenibilidade do código, reusabilidade e eficiência geral de desenvolvimento. Para construir este site, utilizei Angular, TypeScript, RxJS, HTML e CSS."
+<p>Este é o e-commerce Audiophile (peguei este design no site Frontend Mentor). O projeto abrange diversas funcionalidades, incluindo páginas dedicadas para fones de ouvido, alto-falantes e earphones, juntamente com uma página inicial e um carrinho de compras funcional. Utilizando conceitos-chave do Angular, como observables, behavior subjects, guards e interfaces, este projeto tem como objetivo aprimorar a manutenibilidade do código, reusabilidade e eficiência geral de desenvolvimento. Para construir este site, utilizei Angular, TypeScript, RxJS, HTML e CSS.
 </p>
 
 <p>Também postei esse projeto no meu LinkedIn: https://www.linkedin.com/in/lucas-gon%C3%A7alves-3a2662252/</p>
