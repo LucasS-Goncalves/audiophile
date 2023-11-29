@@ -15,16 +15,16 @@ import { CartItem } from 'src/app/interfaces/cartItem';
 })
 export class SummaryComponent implements OnInit{
 
-  items!: Observable<CartItem[]>;
-  totalPriceOfItems!: Observable<number>;
+  items$!: Observable<CartItem[]>;
+  totalPriceOfItems$!: Observable<number>;
   @Input() validForm = false;
   @Output() order = new EventEmitter();
 
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.items = this.cartService.cartItemsChanged.asObservable();
-    this.totalPriceOfItems = this.cartService.priceChanged.asObservable();
+    this.items$ = this.cartService.cartItemsChanged.asObservable();
+    this.totalPriceOfItems$ = this.cartService.priceChanged.asObservable();
   }
 
   onOrder(){

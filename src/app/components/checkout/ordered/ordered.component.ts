@@ -14,7 +14,7 @@ export class OrderedComponent implements OnInit, OnDestroy{
   showItems = false;
   itemsSubscription!: Subscription;
   items: CartItem[] = [];
-  totalPriceOfItems!: Observable<number>;
+  totalPriceOfItems$!: Observable<number>;
 
   constructor(private cartService: CartService, private router: Router){}
 
@@ -25,7 +25,7 @@ export class OrderedComponent implements OnInit, OnDestroy{
         this.items = items;
       }
     );
-    this.totalPriceOfItems = this.cartService.priceChanged.asObservable();
+    this.totalPriceOfItems$ = this.cartService.priceChanged.asObservable();
   }
 
   onBackToHome(){

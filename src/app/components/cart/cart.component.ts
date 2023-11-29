@@ -10,18 +10,18 @@ import { CartItem } from 'src/app/interfaces/cartItem';
 })
 export class CartComponent implements OnInit{
 
-  totalPrice!: Observable<number>;
-  numberOfItems!: Observable<number>;
-  cartItems!: Observable<CartItem[]>;
+  totalPrice$!: Observable<number>;
+  numberOfItems$!: Observable<number>;
+  cartItems$!: Observable<CartItem[]>;
 
   @Output() checkout = new EventEmitter();
 
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.cartItems = this.cartService.cartItemsChanged.asObservable();
-    this.numberOfItems = this.cartService.numberOfItemsChanged.asObservable();
-    this.totalPrice = this.cartService.priceChanged.asObservable();
+    this.cartItems$ = this.cartService.cartItemsChanged.asObservable();
+    this.numberOfItems$ = this.cartService.numberOfItemsChanged.asObservable();
+    this.totalPrice$ = this.cartService.priceChanged.asObservable();
   }
 
   changeAmountInTheCart(index: number, operation: string){

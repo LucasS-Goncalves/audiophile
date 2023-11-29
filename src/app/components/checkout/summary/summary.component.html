@@ -5,7 +5,7 @@
     </h2>
     <section class="summary-products">
       <ul class="products_list">
-        <li class="summary-products-product" *ngFor="let item of items | async">
+        <li class="summary-products-product" *ngFor="let item of items$ | async">
           <img [src]="item.image" alt="Product image" class="summary-products-productImg">
           <article class="product-info">
             <div class="product-name_and_price">
@@ -29,7 +29,7 @@
             total
           </h6>
           <p class="value-container-value">
-            $ {{ totalPriceOfItems | async | totalPrice}}
+            $ {{ totalPriceOfItems$ | async | totalPrice}}
           </p>
         </div>
         <div class="value-container">
@@ -45,7 +45,7 @@
             vat(included)
           </h6>
           <p class="value-container-value">
-            $ {{ ((totalPriceOfItems | async)! *.2).toFixed(0) | totalPrice }}
+            $ {{ ((totalPriceOfItems$ | async)! *.2).toFixed(0) | totalPrice }}
           </p>
         </div>
       </div>
@@ -54,7 +54,7 @@
           grand total
         </h6>
         <p class="total-container-value">
-          $ {{ (totalPriceOfItems | async )! + 50 | totalPrice}}
+          $ {{ (totalPriceOfItems$ | async )! + 50 | totalPrice}}
         </p>
       </div>
       <button class="pay-button see_product-button" [ngClass]="{'disabled': !validForm}" (click)="onOrder()">

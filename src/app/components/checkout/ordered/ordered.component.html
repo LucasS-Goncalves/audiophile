@@ -38,7 +38,7 @@
           grand total
         </h5>
         <p class="totalPrice-price">
-          $ {{ (totalPriceOfItems | async )! + 50 | totalPrice}}
+          $ {{ (totalPriceOfItems$ | async )! + 50 | totalPrice}}
         </p>
       </article>
     </div>

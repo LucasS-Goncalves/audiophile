@@ -1,13 +1,13 @@
 <section class="cartContainer">
   <header class="header">
     <h4 class="header-title">
-      Cart ({{numberOfItems | async}})
+      Cart ({{numberOfItems$ | async}})
     </h4>
-    <button type="button" class="removeAll" (click)="removeItems()" [disabled]="(cartItems|async)!.length === 0">Remove all</button>
+    <button type="button" class="removeAll" (click)="removeItems()" [disabled]="(cartItems$ | async)!.length === 0">Remove all</button>
   </header>
   <main>
     <ul class="summary-products">
-      <li class="summary-products-product" *ngFor="let item of cartItems | async; let i = index">
+      <li class="summary-products-product" *ngFor="let item of cartItems$ | async; let i = index">
         <div class="productContainer">
           <button class="deleteButton" (click)="onDeleteItem(i)">
             <img src="https://cdn-icons-png.flaticon.com/512/7844/7844035.png" alt="">
@@ -38,10 +38,10 @@
       total
     </h6>
     <p class="total-container-value">
-      $ {{totalPrice | async | totalPrice}}
+      $ {{totalPrice$ | async | totalPrice}}
     </p>
   </div>
-  <button class="see_product-button" [ngClass]="{'disabled': (cartItems|async)!.length === 0}" [disabled]="(cartItems|async)!.length === 0" [routerLink]="['/checkout']" (click)="onCheckout()">
+  <button class="see_product-button" [ngClass]="{'disabled': (cartItems$ | async)!.length === 0}" [disabled]="(cartItems$ | async)!.length === 0" [routerLink]="['/checkout']" (click)="onCheckout()">
     Checkout
   </button>
 </section>

@@ -10,7 +10,7 @@ import { CartService } from 'src/app/cart.service';
 })
 export class NavbarComponent implements OnInit{
 
-  numberOfItems!: Observable<number>;
+  numberOfItems$!: Observable<number>;
   isCartOpened = false;
   isMenuOpened = false;
   innerWidth: any;
@@ -37,7 +37,7 @@ export class NavbarComponent implements OnInit{
   constructor(private cartService: CartService){}
 
   ngOnInit(): void {
-    this.numberOfItems = this.cartService.numberOfItemsChanged;
+    this.numberOfItems$ = this.cartService.numberOfItemsChanged;
   }
 
   @HostListener('window:resize', ['$event'])
